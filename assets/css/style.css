@@ -1,0 +1,28 @@
+body {
+    background-image: url("../images/fond.png");
+    background-size: cover;
+    font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
+}
+
+.page_accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #515C6F;
+}
+
+.logo_page_accueil {
+    margin-top: 10%;
+    width: 18em;
+}
+
+.choix_campus_page_accueil,
+.dropdown_page_accueil {
+    margin-top: 3%;
+}
+
+.btn-secondary {
+    background-color: #515C6F;
+}
