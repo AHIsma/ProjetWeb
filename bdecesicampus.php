@@ -36,9 +36,9 @@
 	<footer class="footer_bdecesicampus">
 		<p>Suivez-nous !</p>
 		<ul class="sociaux">
-		<li><a href="https://www.qries.com/"><img class="fb" src="assets/images/ico_facebook.png" /> </a></li>
-		<li><img class="insta" src="assets/images/ico_instagram.png" /></li>
-		<li><img class="youtube" src="assets/images/ico_youtube.png" /></li>
+		<li><a href="https://www.facebook.com/CESIingenieurs" target="_blank"><img class="fb" src="assets/images/ico_facebook.png" /> </a></li>
+		<li><a href="https://www.instagram.com/campus_cesi" target="_blank"><img class="insta" src="assets/images/ico_instagram.png" /></a></li>
+		<li><a href="https://www.youtube.com/channel/UCWanyqUivV6rjbTABGFI8pA" target="_blank"><img class="youtube" src="assets/images/ico_youtube.png" /></a></li>
 		</ul>
 	</footer>
 </body>
