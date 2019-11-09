@@ -11,7 +11,7 @@
 	<title>Accueil</title>
 </head>
 
-<body>
+<body class="body_index">
 
 	<main>
 		<div class="page_accueil">

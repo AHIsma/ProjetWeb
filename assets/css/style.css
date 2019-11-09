@@ -1,21 +1,31 @@
-body {
-    background-image: url("../images/fond.png");
-    background-size: cover;
-    font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* PAGE D'ACCUEIL */
-.page_accueil {
+
+.body_index {
+    background-image: url("../images/fond.png");
+    background-size: cover;
+    font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+}
+
+.page_accueil {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
     color: #515C6F;
 }
 
 .logo_page_accueil {
-    margin-top: 10%;
     width: 18em;
 }
 
@@ -30,6 +40,14 @@ body {
 
 /* DEUXIEME PAGE D'ACCUEIL */
 
+.body_bdecesicampus {
+    background-color: #F6F6F6;
+    font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .navbar {
     background: linear-gradient(to right, #FFFFFF, #EAEAEA);
 }
@@ -42,7 +60,10 @@ body {
     width: 100%;
 }
 
-footer {
+.footer_bdecesicampus {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     font-size: 2em;
     font-weight: 300;
     display: flex;
@@ -53,17 +74,18 @@ footer {
 
 }
 
+.footer_bdecesicampus p {
+    align-items: center;
+}
+
 .sociaux {
     display: flex;
     list-style-type: none;
-    justify-content: space-between;
+    min-width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.fb {
-    width: 50%;
-}
-.insta {
-    width: 50%;
-}
-.youtube {
+
+.footer_bdecesicampus ul li img {
     width: 50%;
 }

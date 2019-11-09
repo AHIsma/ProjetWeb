@@ -11,11 +11,11 @@
 	<title>BDE CESI REIMS</title>
 </head>
 
-<body>
+<body class="body_bdecesicampus">
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand" href="#">BDE CESI École d’Ingénieurs REIMS</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -33,7 +33,7 @@
 				alt="Image d'un evenement BDE" />
 		</aside>
 	</main>
-	<footer>
+	<footer class="footer_bdecesicampus">
 		<p>Suivez-nous !</p>
 		<ul class="sociaux">
 		<li><a href="https://www.qries.com/"><img class="fb" src="assets/images/ico_facebook.png" /> </a></li>
