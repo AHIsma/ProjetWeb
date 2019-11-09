@@ -4,6 +4,7 @@ body {
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
 }
 
+/* PAGE D'ACCUEIL */
 .page_accueil {
     display: flex;
     flex-direction: column;
@@ -25,4 +26,44 @@ body {
 
 .btn-secondary {
     background-color: #515C6F;
+}
+
+/* DEUXIEME PAGE D'ACCUEIL */
+
+.navbar {
+    background: linear-gradient(to right, #FFFFFF, #EAEAEA);
+}
+
+.navbar-brand {
+    color: #5A87DD !important;
+}
+
+.image_soiree {
+    width: 100%;
+}
+
+footer {
+    font-size: 2em;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #5A87DD;
+    background: #F6F6F6;
+
+}
+
+.sociaux {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.fb {
+    width: 50%;
+}
+.insta {
+    width: 50%;
+}
+.youtube {
+    width: 50%;
 }
