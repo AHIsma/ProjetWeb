@@ -53,6 +53,7 @@
 }
 
 .navbar-brand {
+    font-weight: 500;
     color: #5A87DD !important;
 }
 
@@ -61,7 +62,50 @@
 }
 
 .image_soiree {
+    position: relative;
     width: 100%;
+}
+
+.text_sur_image_bdecesicampus {
+    position: absolute;
+    top: 25%;
+    margin-left: 5%;
+    font-family: "True Lies", "Neusa Next Std", Arial, Verdana, sans-serif;
+    color: white;
+}
+
+.text_sur_image_bdecesicampus h1 {
+    font-size: 4em;
+}
+
+ul.voir_plus_bdecesicampus li {
+    position: absolute;
+    top: 48%;
+    margin-left: 80%;
+    font: 1rem 'Fira Sans', sans-serif;
+    display: block;
+    padding: 1em;
+    color: rgb(50, 57, 70);
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    border: 2px solid #F4AB25;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+ul.voir_plus_bdecesicampus a {
+    text-decoration: none;
+}
+
+ul.voir_plus_bdecesicampus li:hover {
+    background-color: #F4AB25;
+    color: cornsilk;
+}
+.closecolor:hover
+{
+    color: white;
 }
 
 .footer_bdecesicampus {
@@ -79,17 +123,67 @@
 }
 
 .footer_bdecesicampus p {
+    min-width: 100%;
     align-items: center;
+    text-align: center;
 }
 
 .sociaux {
     display: flex;
     list-style-type: none;
-    min-width: 50%;
-    align-items: center;
-    justify-content: space-evenly;
+    text-align: center;
 }
 
 .footer_bdecesicampus ul li img {
     width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .navbar-brand {
+        font-size: 0.9em;
+    }
+
+    .image_soiree {
+        display: none;
+    }
+
+    .text_sur_image_bdecesicampus {
+        position: relative;
+        margin-top: 10%;
+        margin-left: 3%;
+        color: #515C6F;
+    }
+    .text_sur_image_bdecesicampus h1 {
+       font-size: 2em;
+    }
+
+    ul.voir_plus_bdecesicampus li {
+        position: relative;
+        /* width: 20%; */
+        margin-top: 10%;
+        margin-left: 50%;
+        margin-right: 10%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-height: 380px) {
+    .image_soiree {
+        display: none;
+    }
+
+    .text_sur_image_bdecesicampus {
+        position: relative;
+        margin-top: 20%;
+        margin-left: 3%;
+        color: #515C6F;
+    }
+    ul.voir_plus_bdecesicampus li {
+        position: relative;
+        margin-top: 20%;
+        margin-left: 3%;
+        color: #515C6F;
+    }
 }

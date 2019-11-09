@@ -66,6 +66,6 @@
 </script>
 <script src="https://code.jquery.com/jquery-1.12.3.js" integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="
 	crossorigin="anonymous"></script>
-<script src="assets/js/javaS.js"></script>
+<script src="assets/js/javaS1.js"></script>
 
 </html>
