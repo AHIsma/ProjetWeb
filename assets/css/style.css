@@ -56,14 +56,18 @@
     color: #5A87DD !important;
 }
 
+.main_bdecesicampus {
+    flex-grow: 1;
+}
+
 .image_soiree {
     width: 100%;
 }
 
 .footer_bdecesicampus {
-    position: absolute;
+    /* position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 0; */
     font-size: 2em;
     font-weight: 300;
     display: flex;

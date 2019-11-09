@@ -27,7 +27,7 @@
 			</div>
 		</nav>
 	</header>
-	<main>
+	<main class="main_bdecesicampus">
 		<aside class="image_soiree_design">
 			<img class="image_soiree" src="assets/images/image_soirée_BDE_CESI_REIMS.png"
 				alt="Image d'un evenement BDE" />
