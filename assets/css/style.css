@@ -111,6 +111,23 @@ ul.voir_plus_bdecesicampus li:active {
     color: cornsilk;
 }
 
+.nav_inscription, .nav_connexion {
+    margin-right: 1em;
+    color: black !important;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 8px 0px 10px #555;
+    /* border: 2px solid black; */
+}
+
+.nav_inscription:hover, .nav_connexion:hover {
+    margin-right: 1em;
+    color: black !important;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 8px 8px 30px #555;
+}
+
 .footer_bdecesicampus {
     /* position: absolute;
     width: 100%;
@@ -164,7 +181,7 @@ ul.voir_plus_bdecesicampus li:active {
     min-width: 40%;
     background: white;
     overflow: hidden;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .uname,
@@ -266,6 +283,28 @@ ul.voir_plus_bdecesicampus li:active {
         text-align: center;
     }
 
+    .nav_inscription, .nav_connexion {
+        margin-bottom: 1em;
+        margin-right: 1em;
+        color: black !important;
+        width: 50%;
+        text-align: center;
+        border-radius: 30px;
+        background: white;
+        box-shadow: none;
+    }
+
+    .titre_connexion {
+        text-align: center;
+        color: #515C6F;
+        font-weight: bold;
+        font-size: 3em;
+    }
+
+    .form_connex {
+        border-radius: 23% 10%;
+    }
+
 }
 
 @media screen and (max-height: 380px) {
@@ -285,5 +324,9 @@ ul.voir_plus_bdecesicampus li:active {
         margin-top: 20%;
         margin-left: 3%;
         color: #515C6F;
+    }
+
+    .form_connex {
+        border-radius: 25% 10%;
     }
 }

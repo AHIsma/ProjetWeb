@@ -22,8 +22,8 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav ml-auto">
-					<a class="nav-item nav-link" href="inscription.php">S'INSCRIRE</a>
-					<a class="nav-item nav-link" href="connexion.php">SE CONNECTER</a>
+					<a class="nav-item nav-link nav_inscription" href="inscription.php">S'INSCRIRE</a>
+					<a class="nav-item nav-link nav_connexion" href="connexion.php">SE CONNECTER</a>
 				</div>
 			</div>
 		</nav>
