@@ -6,7 +6,8 @@
 
 /* PAGE D'ACCUEIL */
 
-.body_index {
+.body_index,
+.body_connexion {
     background-image: url("../images/fond.png");
     background-size: cover;
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
@@ -103,9 +104,11 @@ ul.voir_plus_bdecesicampus li:hover {
     background-color: #F4AB25;
     color: cornsilk;
 }
-.closecolor:hover
-{
-    color: white;
+
+ul.voir_plus_bdecesicampus li:active {
+    border: none;
+    background-color: rgb(50, 57, 70);
+    color: cornsilk;
 }
 
 .footer_bdecesicampus {
@@ -138,6 +141,101 @@ ul.voir_plus_bdecesicampus li:hover {
     width: 50%;
 }
 
+
+/* PAGE CONNEXION & INSCRIPTION */
+
+.titre_connexion {
+    text-align: center;
+    color: #515C6F;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_connex {
+    color: #515C6F;
+    min-width: 40%;
+    background: white;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.uname,
+.youpasswd {
+    min-width: 55%;
+    opacity: 0.5;
+    padding-top: 2%;
+    text-align: left;
+}
+
+#username,
+#password {
+    color: #515C6F;
+    caret-color: #FF6969;
+    width: 70%;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.form_connex i {
+    min-width: 15%;
+    text-align: left;
+}
+
+.button_connex input {
+    font-weight: bold;
+    margin-top: 20%;
+    background: #F4AB25;
+    color: white;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.button_connex input:hover {
+    background: #515C6F;
+}
+.button_connex input:active {
+    background: rgb(35, 40, 48);
+}
+
+
+/* PAGE CONNEXION ECHOUEE */
+
+.titre_echouee {
+    text-align: center;
+    color: #CE4141;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.message_echouee {
+    margin-top: 5%;
+    font-weight: 300;
+    color: #5A87DD;
+    font-size: 2em;
+}
+
+
 @media screen and (max-width: 1024px) {
 
     .navbar-brand {
@@ -154,8 +252,9 @@ ul.voir_plus_bdecesicampus li:hover {
         margin-left: 3%;
         color: #515C6F;
     }
+
     .text_sur_image_bdecesicampus h1 {
-       font-size: 2em;
+        font-size: 2em;
     }
 
     ul.voir_plus_bdecesicampus li {
@@ -180,6 +279,7 @@ ul.voir_plus_bdecesicampus li:hover {
         margin-left: 3%;
         color: #515C6F;
     }
+
     ul.voir_plus_bdecesicampus li {
         position: relative;
         margin-top: 20%;
