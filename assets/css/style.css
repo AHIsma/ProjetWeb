@@ -116,7 +116,6 @@ ul.voir_plus_bdecesicampus li:active {
     color: black !important;
     border-radius: 30px;
     background: white;
-    box-shadow: 8px 0px 10px #555;
     /* border: 2px solid black; */
 }
 
