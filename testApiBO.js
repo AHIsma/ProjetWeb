@@ -96,9 +96,43 @@ myRouter.route('/flag')
         }
     });
 
-myRouter.route('/product')
+myRouter.route("/products") //requêtes pour gérer les produits
+    //on ajoute un produit
     .post(function (req, res) {
-        connection.query("")
+        connection.query("INSERT INTO products (name, description, price) VALUES ('" + req.query.name + "', '" + req.query.description + "', '" + req.query.price + "')", function (error, results, fields) {
+            if (error) throw error;
+        });
+        res.json({
+            message: "Produit créé avec les infos suivantes :",
+            name: req.query.name,
+            description: req.query.description,
+            price: req.query.price,
+            methode: req.method
+        });
+    })
+    //on supprime un produit
+    .delete(function (req, res) {
+        connection.query("DELETE FROM products WHERE id = '" + req.query.id + "'", function (error, results, fields) {
+            if (error) throw error;
+        });
+
+        res.json({
+            message: "Produit suivant supprimé :",
+            id: req.query.id
+        });
+    })
+    .patch(function (req, res) {
+        connection.query("UPDATE products SET name = '" + req.query.name + "', description = '" + req.query.description + "', price = " + req.query.price + " WHERE products.id = " + req.query.id, function (error, results, fields) {
+            if (error) throw error;
+        })
+
+        res.json({
+            message: "Le produit a été mis à jour",
+            name: req.query.name,
+            description: req.query.description,
+            price: req.query.price,
+            id: req.query.id
+        })
     })
 
 app.use(myRouter);
