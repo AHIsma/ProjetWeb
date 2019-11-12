@@ -138,6 +138,36 @@ ul.voir_plus_bdecesicampus li:hover {
     width: 50%;
 }
 
+.haut_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bas_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cesi_footer {
+    flex: 1;
+}
+
+.about_footer {
+    flex: 1;
+}
+
+.contact_footer {
+    flex: 1;
+}
+
 @media screen and (max-width: 1024px) {
 
     .navbar-brand {
