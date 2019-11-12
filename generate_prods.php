@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 
 $bdd = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root','');
 $requete = $bdd->prepare("SELECT * FROM  goodie_vetements WHERE Ville = :ville");

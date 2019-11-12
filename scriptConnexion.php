@@ -26,8 +26,9 @@ if($ligne && $ligne['Status'] === '1'){
 
 }
 elseif ($ligne && $ligne['Status'] === '2') {
-		session_start();
- 			$_SESSION['Ville'] = $ligne['Ville'];
+		if(!isset($_SESSION)){
+    session_start();} 			
+    $_SESSION['Ville'] = $ligne['Ville'];
     		
 		echo "vous etes un personnel";
 		header('Location: /ProjetWeb/boutique.php');
