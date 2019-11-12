@@ -24,7 +24,7 @@ $requete = $bdd->prepare("SELECT * FROM  goodie_vetements WHERE Ville = :ville")
                                         <a href="index.php">
                                             <div class="bbb_deals_item_name">'.$ligne['Designation'].'</div>
                                         </a>
-                                        <div class="bbb_deals_item_price ml-auto">'.$ligne['Prix'].'euros </div>
+                                        <div class="bbb_deals_item_price ml-auto">'.$ligne['Prix'].'€ </div>
                                     </div>
                                 </div>
                             </div>
