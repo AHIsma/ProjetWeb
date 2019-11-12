@@ -17,7 +17,8 @@ $ligne=$requete->fetch();
 
 
 if($ligne && $ligne['Status'] === '1'){
- 	session_start(); 
+ 	if(!isset($_SESSION)){
+    session_start();} 
  		$_SESSION['Ville'] = $ligne['Ville'];
  	echo "vous etes un etudiant";
  	header('Location: /ProjetWeb/boutique.php');
@@ -26,7 +27,8 @@ if($ligne && $ligne['Status'] === '1'){
 
 }
 elseif ($ligne && $ligne['Status'] === '2') {
-		session_start();
+		if(!isset($_SESSION)){
+    session_start();}
  			$_SESSION['Ville'] = $ligne['Ville'];
     		
 		echo "vous etes un personnel";
@@ -35,7 +37,8 @@ elseif ($ligne && $ligne['Status'] === '2') {
     exit();
 }
 elseif ($ligne && $ligne['Status'] === '3') {
-		session_start();
+		if(!isset($_SESSION)){
+    session_start();}
  			$_SESSION['Ville'] = $ligne['Ville'];
     		
 		echo "vous etes un personnel";
