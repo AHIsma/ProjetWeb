@@ -17,25 +17,30 @@ $ligne=$requete->fetch();
 
 
 if($ligne && $ligne['Status'] === '1'){
- 	session_start();
- 		$_SESSION['ville'] = $ligne['ville'];
- 		$requete->execute();
- 	echo "vous etes un étudiant";
+ 	session_start(); 
+ 		$_SESSION['Ville'] = $ligne['Ville'];
+ 	echo "vous etes un etudiant";
+ 	header('Location: /ProjetWeb/boutique.php');
+ 	
  exit();
 
 }
 elseif ($ligne && $ligne['Status'] === '2') {
 		session_start();
- 			$_SESSION['ville'] = $ligne['ville'];
-    		$requete->execute();
+ 			$_SESSION['Ville'] = $ligne['Ville'];
+    		
 		echo "vous etes un personnel";
+		header('Location: /ProjetWeb/boutique.php');
+		
     exit();
 }
 elseif ($ligne && $ligne['Status'] === '3') {
 		session_start();
- 			$_SESSION['ville'] = $ligne['ville'];
-    		$requete->execute();
+ 			$_SESSION['Ville'] = $ligne['Ville'];
+    		
 		echo "vous etes un personnel";
+		header('Location: /ProjetWeb/boutique.php');
+		
 	exit();
 }
 else

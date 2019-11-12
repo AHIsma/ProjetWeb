@@ -1,91 +1,15 @@
 <?php
-/*switch ($ligne['Ville']) {
+session_start();
 
-    case 'Reims':
- 
-        $requete = $bdd->prepare("SELECT * FROM  goodie_vetements");
-         $requete->execute();   
-            while ($ligne = $requete->fetch()) {
-                if ($ligne['Ville'] === 'Reims') {
-                    echo "<div>
-                        <img src='" . $ligne['Link'] . "'/>
-                        <div> ".$ligne['Prix']."euros </div>
-                        <div> ".$ligne['Designation']." </div>
-                        </div>";                }
-                         header('location: boutique.php');
-            }   
-        
-        
-        exit();
-
-        break;
-
-    case 'Lille':
-        $_SESSION['ville'] = "Lille";
-        $requete = $bdd->prepare("SELECT * FROM  goodie_vetements");
-         $requete->execute();   
-            while ($ligne = $requete->fetch()) {
-                if ($ligne['Ville'] === 'Lille') {
-                    echo "<header>CESI Ecole d'ingénieur Lille</header>";
-                    echo "<div>
-                        <img src='" . $ligne['Link'] . "'/>
-                        <div> ".$ligne['Prix']."euros </div>
-                        <div> ".$ligne['Designation']." </div>
-                        </div>";                }
-            }   
-        
-        exit();
-
-        break;
-
-    case 'Bordeaux':
-     
-        $requete = $bdd->prepare("SELECT * FROM  goodie_vetements");
-         $requete->execute();   
-            while ($ligne = $requete->fetch()) {
-                if ($ligne['Ville'] === 'Bordeaux') {
-                    echo "<div>
-                        <img src='" . $ligne['Link'] . "'/>
-                        <div> ".$ligne['Prix']."euros </div>
-                        <div> ".$ligne['Designation']." </div>
-                        </div>";                }
-            }   
-        
-        exit();
-
-        break;
-
-    case 'Strasbourg':
-    
-        $requete = $bdd->prepare("SELECT * FROM  goodie_vetements");
-         $requete->execute();   
-            while ($ligne = $requete->fetch()) {
-                if ($ligne['Ville'] === 'Strasbourg') {
-                    echo "<div>
-                        <img src='" . $ligne['Link'] . "'/>
-                        <div> ".$ligne['Prix']."euros </div>
-                        <div> ".$ligne['Designation']." </div>
-                        </div>";                }
-            }   
-        
-        exit();
-
-        break;
-    case 'Paris':
-        
-        $requete = $bdd->prepare("SELECT * FROM  goodie_vetements");
-         $requete->execute();   
-            while ($ligne = $requete->fetch()) {
-                if ($ligne['Ville'] === 'Paris') {
-      
-                    echo "<div>
-                        <img src='" . $ligne['Link'] . "'/>
-                        <div> ".$ligne['Prix']." euros </div>
-                        <div> ".$ligne['Designation']." </div>
-                        </div>";                }
-            }   
-        exit();
-
-        break;
-    }*/
+$bdd = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root','');
+$requete = $bdd->prepare("SELECT * FROM  goodie_vetements WHERE Ville = :ville");
+        $requete->bindvalue(':ville', $_SESSION['Ville'], PDO::PARAM_STR);
+        $requete->execute();  
+        foreach ($requete->fetchAll() as $ligne) {
+            echo "<div>
+            <img src='" . $ligne['Link'] . "'/>
+            <strong> ".$ligne['Prix']."euros </strong>
+            <div> ".$ligne['Designation']." </div>
+            </div>";
+           }   
 ?>
