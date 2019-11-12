@@ -111,7 +111,8 @@ ul.voir_plus_bdecesicampus li:active {
     color: cornsilk;
 }
 
-.nav_inscription, .nav_connexion {
+.nav_inscription,
+.nav_connexion {
     margin-right: 1em;
     color: black !important;
     border-radius: 30px;
@@ -119,7 +120,8 @@ ul.voir_plus_bdecesicampus li:active {
     /* border: 2px solid black; */
 }
 
-.nav_inscription:hover, .nav_connexion:hover {
+.nav_inscription:hover,
+.nav_connexion:hover {
     margin-right: 1em;
     color: black !important;
     border-radius: 30px;
@@ -230,6 +232,7 @@ ul.voir_plus_bdecesicampus li:active {
 .button_connex input:hover {
     background: #515C6F;
 }
+
 .button_connex input:active {
     background: rgb(35, 40, 48);
 }
@@ -249,6 +252,263 @@ ul.voir_plus_bdecesicampus li:active {
     font-weight: 300;
     color: #5A87DD;
     font-size: 2em;
+}
+
+
+/* PAGE BOUTIQUE */
+
+.search {
+    text-align: right;
+    margin-right: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    color: #515C6F;
+    text-align: center;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
+
+.carousel-caption {
+    width: 30%;
+    z-index: 10;
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    left: 10%;
+    bottom: auto;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.voir_plus_top {
+    background-color: transparent;
+    text-align: left;
+    color: white;
+    border: none;
+    margin-top: 5%;
+    border-bottom: 1px solid white;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.voir_plus_scroll {
+    margin-top: 2%;
+    color: #F4AB25;
+    border-bottom: 2px solid #F4AB25;
+}
+
+.voir_plus_scroll:hover {
+    color: #515C6F;
+    border-bottom: 2px solid #515C6F;
+}
+
+.form_scroll {
+    text-align: center;
+}
+
+/* LISTE DES ARTICLES */
+
+.mydiv {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.padding-0 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.img-style {
+    margin-left: -11px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 104% !important;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.bbb_background {
+    background-color: #E0E0E0 !important;
+}
+
+.ribbon span {
+    position: absolute;
+    display: block;
+    width: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #FF4858;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.bbb_deals_item .panier_icone {
+    position: absolute;
+    display: block;
+    color: #33A0FF;
+    margin-left: 25%;
+    margin-top: -40%;
+    text-align: center;
+}
+
+.ribbon-top-right span {
+    top: 30px;
+}
+
+.bbb_deals {
+    width: 100%;
+    margin-right: 7%;
+    padding-top: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 34px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 0px;
+}
+
+.bbb_deals_slider_container {
+    width: 100%;
+}
+
+.bbb_deals_item {
+    width: 100% !important;
+}
+
+.bbb_deals_image {
+    width: 100%;
+}
+
+.bbb_deals_image img {
+    width: 100%;
+}
+
+.bbb_deals_content {
+    margin-top: 33px;
+}
+
+.bbb_deals_item_category a {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.bbb_deals_item_price_a {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.bbb_deals_item_name {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.bbb_deals_item_price {
+    font-size: 24px;
+    font-weight: 500;
+    color: #df3b3b;
+}
+
+.bbb_deals_item a {
+    text-decoration: none;
+}
+
+.nav_categories .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.nav_categories .navbar {
+    margin-top: 9%;
+    margin-bottom: 5%;
+    min-height: 30px;
+    background: transparent !important;
+}
+
+.nav_categories .navbar-nav li > a {
+	text-transform: capitalize;
+	color: blue;
+	transition: background-color .2s, color .2s;
+}
+
+.nav_categories .navbar-nav li.active > a {
+	border-bottom: 2px solid #33A0FF;
+	color: #fff;
+}
+
+.haut_footer {
+    font-size: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    padding-top: 2%;
+    border-top: 2px solid rgb(223, 223, 223);
+}
+
+.haut_footer h2 {
+    font-size: 2em;
+}
+
+.bas_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+}
+
+.cesi_footer {
+    margin-right: 2%;
+    flex: 1;
+}
+
+.about_footer {
+    margin-right: 2%;
+    flex: 1;
+}
+
+.contact_footer {
+    flex: 1;
+}
+
+.footer_all {
+    font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
 }
 
 
@@ -276,13 +536,14 @@ ul.voir_plus_bdecesicampus li:active {
     ul.voir_plus_bdecesicampus li {
         position: relative;
         /* width: 20%; */
-        margin-top: 10%;
+        margin-top: 8%;
         margin-left: 50%;
         margin-right: 10%;
         text-align: center;
     }
 
-    .nav_inscription, .nav_connexion {
+    .nav_inscription,
+    .nav_connexion {
         margin-bottom: 1em;
         margin-right: 1em;
         color: black !important;
@@ -304,7 +565,38 @@ ul.voir_plus_bdecesicampus li:active {
         border-radius: 23% 10%;
     }
 
+    .form_scroll {
+        display: none;
+    }
+
+    .bbb_deals {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .bbb_deals_item .panier_icone {
+        font-size: 5em !important;
+        margin-left: 10%;
+        margin-top: -40%;
+        text-align: center;
+    }
+
+    
+
 }
+
+
+@media screen and (max-width: 772px) {
+    
+    .bbb_deals_item .panier_icone {
+        font-size: 10em !important;
+        margin-left: 30%;
+        margin-top: -60%;
+        text-align: center;
+    }
+
+}
+
 
 @media screen and (max-height: 380px) {
     .image_soiree {
@@ -327,5 +619,24 @@ ul.voir_plus_bdecesicampus li:active {
 
     .form_connex {
         border-radius: 25% 10%;
+    }
+
+    .bbb_deals {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .bbb_deals_title {
+        left: 15px;
+        font-size: 16px;
+    }
+
+    .bbb_deals_slider_nav_container {
+        right: 5px;
+    }
+
+    .bbb_deals_item_name,
+    .bbb_deals_item_price {
+        font-size: 20px;
     }
 }
