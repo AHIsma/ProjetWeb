@@ -73,7 +73,7 @@
                 <p class="pass_connexion">
                     <label for="password" class="youpasswd" data-icon="p"> SEXE </label><br>
                     <i class="fa fa-male fa-lg fa-fw" aria-hidden="true"></i>
-                    <input id="password" name="gender" required="required" type="text" placeholder="Male/Femelle" />
+                    <input id="password" name="gender" required="required" type="text" placeholder="Homme/Femme" />
                 </p>
                 <p class="pass_connexion">
                     <label for="password" class="youpasswd" data-icon="p"> TELEPHONE </label><br>
