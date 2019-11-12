@@ -1,7 +1,7 @@
 <?php
 
-// Adapter dbname et mot de passe si besoin
-$bdd = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root','');
+include 'connexionBdd.php';
+
 // Récupération des données utilisateurs
 $e_mail = isset($_POST['email']) ? $_POST['email']: NULL;
 $mot_DePasse = isset($_POST['motDePasse']) ? $_POST['motDePasse']: NULL;
