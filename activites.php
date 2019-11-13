@@ -9,86 +9,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="favicon.png" />
-    <title>BOUTIQUE BDE CESI</title>
+    <title>ACTIVITÉS</title>
 </head>
 
-<body class="body_boutique">
+<body class="body_activites">
     <header>
-    <?php
+        <?php
             include 'nav_nonconnecte.php';
         ?>
     </header>
 
     <main class="main_boutique">
-        <div class="search-container">
-            <form class="search" action="action_page.php">
-                <input type="text" placeholder="RECHERCHE" name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="assets/images/top1.png" alt="Sweat CESI REIMS">
-                    <div class="carousel-caption">
-                        <h3>Sweat a capuche</h3>
-                        <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's standard dummy.</p>
-                        <form action="http://google.com">
-                            <input class="voir_plus_top" type="submit" value="VOIR PLUS" />
-                        </form>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/images/top2.png" alt="Tasse CESI REIMS">
-                    <div class="carousel-caption">
-                        <h3>Tasse</h3>
-                        <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's standard dummy.</p>
-                        <form action="http://google.com">
-                            <input class="voir_plus_top" type="submit" value="VOIR PLUS" />
-                        </form>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/images/top3.png" alt="USB CESI REIMS">
-                    <div class="carousel-caption">
-                        <h3>USB</h3>
-                        <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's standard dummy.</p>
-                        <form action="http://google.com">
-                            <input class="voir_plus_top" type="submit" value="VOIR PLUS" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-
-        <form class="form_scroll" action="#articles">
-            <input class="voir_plus_top voir_plus_scroll" type="submit" value="PLUS DE PRODUITS" />
-        </form>
-
         <div id="articles" class="container mydiv">
-            <?php
-            include 'nav_categories.php';
-        ?>
+            <p></p>
+            <p></p>
+            <div class="nav_categories">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <ul class="navbar-nav navbar-center flex-row">
+                        <li class="nav-item">
+                            <a class="nav-link" href="activites.php?id=avenir">Activités à venir</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="activites.php?id=passee">Activités passées</a>
+                        </li>
+                </nav>
+            </div>
 
             <div class="row">
                 <div class="col-md-3">
@@ -104,10 +49,9 @@
 
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <div class="bbb_deals_item_category"><a href="boutique_categories#sweat">Sweats</a></div>
                                     </div>
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <a>
+                                        <a href="index.php">
                                             <div class="bbb_deals_item_name">Sweat CESI REIMS</div>
                                         </a>
                                         <div class="bbb_deals_item_price ml-auto">40€</div>
@@ -128,10 +72,9 @@
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <div class="bbb_deals_item_category"><a href="boutique_categories#pulls">Pulls</a></div>
                                     </div>
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <a>
+                                        <a href="index.php">
                                             <div class="bbb_deals_item_name">Pull eSPORT REIMS</div>
                                         </a>
                                         <div class="bbb_deals_item_price ml-auto">30€</div>
@@ -152,10 +95,9 @@
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <div class="bbb_deals_item_category"><a href="boutique_categories#tasses">Tasses</a></div>
                                     </div>
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <a>
+                                        <a href="index.php">
                                             <div class="bbb_deals_item_name">Tasse eSPORT REIMS</div>
                                         </a>
                                         <div class="bbb_deals_item_price ml-auto">20€</div>
@@ -176,10 +118,9 @@
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <div class="bbb_deals_item_category"><a href="boutique_categories#usb">Clés USB</a></div>
                                     </div>
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <a>
+                                        <a href="index.php">
                                             <div class="bbb_deals_item_name">Clé USB BDE CESI REIMS</div>
                                         </a>
                                         <div class="bbb_deals_item_price ml-auto">10€</div>

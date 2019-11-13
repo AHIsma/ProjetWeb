@@ -15,7 +15,7 @@
                                     </div>
                                     <div class="modal-body"><i class="fa fa-question-circle"></i> Voulez-vous vraiment
                                         vous déconnecter? </div>
-                                    <div class="modal-footer"><a href="boutique.php"
+                                    <div class="modal-footer"><a href="requests/scriptLogout.php"
                                             class="btn btn-primary btn-block">Se déconnecter</a></div>
                                 </div>
                             </div>
@@ -34,8 +34,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link nav_boutique" href="">BOUTIQUE</a>
-                        <a class="nav-item nav-link nav_activites" href="">ACTIVITÉS</a>
+                        <a class="nav-item nav-link nav_boutique" href="boutique.php">BOUTIQUE</a>
+                        <a class="nav-item nav-link nav_activites" href="activites.php">ACTIVITÉS</a>
                         <a class="nav-item nav-link nav_blog" href="">BLOG</a>
                     </div>
                 </div>

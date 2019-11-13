@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Neusa Next Std';
+    src: url('fonts/NeusaNextStd-Regular.otf') format('otf'),
+         url('fonts/NeusaNextStd-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'True Lies';
+    src: url('fonts/TrueLies.ttf');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +17,7 @@
 /* PAGE D'ACCUEIL */
 
 .body_index,
-.body_connexion, .body_boutique, .body_connecter_inscrire {
+.body_connexion, .body_boutique, .body_connecter_inscrire, .body_activites {
     background-image: url("../images/fond.png");
     background-size: cover;
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
@@ -460,6 +470,11 @@ ul.voir_plus_bdecesicampus li:active {
     background: transparent !important;
 }
 
+.nav_categories .navbar-light .navbar-nav .nav-link:hover {
+    color: black !important;
+    opacity: 1;
+}
+
 
 /* FOOTER */
 
@@ -645,7 +660,7 @@ footer .liens a {
     }
 
     .nav_categories .navbar-light .navbar-nav .nav-link {
-        margin-right: 2em;
+        margin-right: 1em;
     }
 
     
