@@ -14,11 +14,10 @@
 
 <body class="body_boutique">
     <header>
-    <?php
-            include 'nav_nonconnecte.php';
+        <?php
+            include 'nav_connecte.php';
         ?>
     </header>
-
     <main class="main_boutique">
         <div class="search-container">
             <form class="search" action="action_page.php">
@@ -87,7 +86,7 @@
 
         <div id="articles" class="container mydiv">
             <?php
-            include 'nav_categories.php';
+            include 'nav_categories_connecte.php';
         ?>
 
             <div class="row">

@@ -7,7 +7,7 @@
 /* PAGE D'ACCUEIL */
 
 .body_index,
-.body_connexion {
+.body_connexion, .body_boutique {
     background-image: url("../images/fond.png");
     background-size: cover;
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
@@ -257,6 +257,28 @@ ul.voir_plus_bdecesicampus li:active {
 
 /* PAGE BOUTIQUE */
 
+
+/* NAVBAR BOUTIQUE */
+.nav_all .navbar-light .navbar-nav .nav-link {
+    color: black !important;
+    font-weight: bold;
+    width: 150px;
+    text-align: center;
+    background-color: #F4AB25;
+    border: 1px solid black;
+    margin-left: 2em;
+}
+
+.nav_all .navbar-light .navbar-nav .nav-link.active {
+    border-bottom: 3px solid #AEAEAE;
+    border: 1px solid #5A87DD;
+    color: #fff !important;
+    text-shadow: 0 0 0.2em #5A87DD;
+}
+
+
+/* BARRE DE RECHERCHE */
+
 .search {
     text-align: right;
     margin-right: 2em;
@@ -351,8 +373,8 @@ ul.voir_plus_bdecesicampus li:active {
     margin-top: 20px;
 }
 
-.bbb_background {
-    background-color: #E0E0E0 !important;
+.bbb_deals {
+    background-color: rgba(255, 255, 255, 0.932) !important;
 }
 
 .ribbon span {
@@ -441,6 +463,9 @@ ul.voir_plus_bdecesicampus li:active {
     text-decoration: none;
 }
 
+
+/* NAVBAR CATEGORIES */
+
 .nav_categories .navbar-nav.navbar-center {
     position: absolute;
     left: 50%;
@@ -454,16 +479,12 @@ ul.voir_plus_bdecesicampus li:active {
     background: transparent !important;
 }
 
-.nav_categories .navbar-nav li > a {
-	text-transform: capitalize;
-	color: blue;
-	transition: background-color .2s, color .2s;
-}
-
 .nav_categories .navbar-nav li.active > a {
 	border-bottom: 2px solid #33A0FF;
-	color: #fff;
 }
+
+
+/* FOOTER */
 
 .haut_footer {
     font-size: 75%;
@@ -510,6 +531,42 @@ ul.voir_plus_bdecesicampus li:active {
 .footer_all {
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
 }
+footer .liens a {
+    color: black;
+}
+
+
+/* NAVBAR SE CONNECTER & S'INSCRIRE */
+
+.nav_connexion_inscription .navbar {
+    background: black !important;
+}
+
+.nav_connexion_inscription .navbar-light .navbar-nav .nav-link {
+    margin-right: 2em;
+    font-size: 0.7em;
+    color: white !important;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+.nav_connexion_inscription .navbar-light .navbar-nav .nav-link:hover {
+    background-color: white;
+    color: black !important;
+}
+
+/* NAVBAR CONNECTE (PANIER + PROFILE) */
+
+.nav_connecte .navbar {
+    background: black !important;
+}
+
+.nav_connecte .navbar-light .navbar-nav .nav-link {
+    margin-right: 2em;
+    color: white !important;
+    border-radius: 25px;
+}
+
 
 
 @media screen and (max-width: 1024px) {
@@ -579,6 +636,10 @@ ul.voir_plus_bdecesicampus li:active {
         margin-left: 10%;
         margin-top: -40%;
         text-align: center;
+    }
+
+    .nav_categories .navbar-light .navbar-nav .nav-link {
+        margin-right: 2em;
     }
 
     
