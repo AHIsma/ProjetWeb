@@ -10,7 +10,7 @@ $requete = $bdd->prepare("SELECT * FROM  goodie_vetements WHERE Ville = :ville")
         foreach ($requete->fetchAll() as $ligne) {
             echo "<div>
             <img src='" . $ligne['Link'] . "'/>
-            <strong> ".$ligne['Prix']."euros </strong>
+            <p> ".$ligne['Prix']."euros </p>
             <div> ".$ligne['Designation']." </div>
             </div>";
            }   
