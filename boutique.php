@@ -98,7 +98,7 @@
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="assets/images/sweat.png"
                                         alt="">
-                                    <a href="index.php" class="panier" style="display: none;">
+                                    <a href="panier.php" class="panier" style="display: none;">
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a>
                                 </div>
 
@@ -124,7 +124,7 @@
                         <div class="bbb_deals_slider_container">
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="assets/images/pull.png"
-                                        alt=""><a href="index.php" class="panier" style="display: none;">
+                                        alt=""><a href="panier.php" class="panier" style="display: none;">
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
@@ -148,7 +148,7 @@
                         <div class="bbb_deals_slider_container">
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="assets/images/tasse.png"
-                                        alt=""><a href="index.php" class="panier" style="display: none;">
+                                        alt=""><a href="panier.php" class="panier" style="display: none;">
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
@@ -172,7 +172,7 @@
                         <div class="bbb_deals_slider_container">
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="assets/images/usb.png"
-                                        alt=""><a href="index.php" class="panier" style="display: none;">
+                                        alt=""><a href="panier.php" class="panier" style="display: none;">
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">

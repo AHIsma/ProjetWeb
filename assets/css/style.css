@@ -1,8 +1,9 @@
 @font-face {
     font-family: 'Neusa Next Std';
     src: url('fonts/NeusaNextStd-Regular.otf') format('otf'),
-         url('fonts/NeusaNextStd-Regular.ttf') format('truetype');
+        url('fonts/NeusaNextStd-Regular.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'True Lies';
     src: url('fonts/TrueLies.ttf');
@@ -17,7 +18,11 @@
 /* PAGE D'ACCUEIL */
 
 .body_index,
-.body_connexion, .body_boutique, .body_connecter_inscrire, .body_activites {
+.body_connexion,
+.body_boutique,
+.body_connecter_inscrire,
+.body_activites,
+.body_panier {
     background-image: url("../images/fond.png");
     background-size: cover;
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
@@ -523,6 +528,7 @@ ul.voir_plus_bdecesicampus li:active {
 .footer_all {
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
 }
+
 footer .liens a {
     color: black;
 }
@@ -565,7 +571,9 @@ footer .liens a {
     text-align: center;
     justify-content: center;
 }
-.button_connexion, .button_inscription {
+
+.button_connexion,
+.button_inscription {
     cursor: pointer;
     margin-bottom: 5%;
     border: 1px solid black;
@@ -578,16 +586,111 @@ footer .liens a {
     padding-bottom: 2%;
 }
 
-.button_connexion a, .button_inscription a {
+.button_connexion a,
+.button_inscription a {
     color: white;
     text-decoration: none;
 }
 
-.button_connexion:hover , .button_inscription:hover {
-    
+.button_connexion:hover,
+.button_inscription:hover {
+
     background-color: #515C6F;
 }
 
+
+/* PAGE PANIER */
+
+.body_panier {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.body_panier .table {
+    background: rgba(255, 255, 255, 0.726);
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.body_panier .item {
+    padding-top: 1%;
+    padding-bottom: 10%;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.body_panier .action {
+    display: inline-block;
+    Cursor: pointer;
+}
+
+.body_panier .action .del {
+    color: #FF4252;
+}
+
+.body_panier .image {
+    width: 9%;
+}
+
+.body_panier .name {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+}
+
+.body_panier .quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+}
+
+.body_panier button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    color: #33A0FF;
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.body_panier .size {
+    border: none;
+    color: white;
+    padding: 0.3em;
+    border-radius: 6px;
+    background-color: #F4AB25;
+}
+
+.body_panier .total-price {
+    text-align: right;
+    font-size: 2em;
+}
+
+.body_panier .payer {
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: #F4AB25;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.body_panier .payer:hover {
+    color: white;
+    background-color: #515C6F;
+    font-weight: 900;
+}
 
 
 @media screen and (max-width: 1024px) {
@@ -663,13 +766,13 @@ footer .liens a {
         margin-right: 1em;
     }
 
-    
+
 
 }
 
 
 @media screen and (max-width: 772px) {
-    
+
     .bbb_deals_item .panier_icone {
         font-size: 10em !important;
         margin-left: 30%;
