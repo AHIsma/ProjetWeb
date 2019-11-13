@@ -1,11 +1,11 @@
-<?php
-if(!isset($_SESSION)){
+	<?php
+	if(!isset($_SESSION)){
 
-    session_start();
-}
+		session_start();
+	}
 
-include 'connexionBdd.php';
-$ville = $_SESSION['Ville'];
- 
-echo " <strong> CESI École d’Ingénieurs ".$ville." </strong>";
-?>
+	include 'connexionBdd.php';
+	$ville = $_SESSION['Ville'];
+
+	echo " <strong> CESI École d’Ingénieurs ".$ville." </strong>";
+	?>

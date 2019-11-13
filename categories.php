@@ -30,22 +30,22 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav navbar-center">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Tout <span class="sr-only">(current)</span></a>
+                        <a  class="nav-link" href="generate_prods.php"?id="All">Tout </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sweat</a>
+                        <a class="nav-link" href="generate_sweats.php">Sweat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pull</a>
+                        <a class="nav-link" href="generate_pulls.php">Pull</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Polos</a>
+                        <a class="nav-link" href="generate_polos.php">Polos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tasses</a>
+                        <a class="nav-link" href="generate_tasses.php">Tasses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Clés USB</a>
+                        <a class="nav-link" href="generate_cle_usb.php">Clés USB</a>
                     </li>
                 </ul>
             </div>
