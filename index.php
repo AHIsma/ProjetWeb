@@ -24,30 +24,30 @@
 				Votre campus
 			</button>
 			<div class="dropdown-menu">
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs ARRAS</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs LILLE</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs ROUEN</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs CAEN</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs REIMS</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs NANCY</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs STRASBOURG</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs PARIS</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs LE MANS</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs ORLEANS</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs BREST</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs SAINT-NAZAIRE</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs NANTES</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs DIJON</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs LA ROCHELLE</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs ANGOULEME</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs LYON</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs GRENOBLE</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs BORDEAUX</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs TOULOUSE</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs PAU</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs MONTPELLIER</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs AIX-EN-PROVENCE</button>
-				<button class="dropdown-item" type="button">CESI École d’Ingénieurs NICE</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Arras</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Lille</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Rouen</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Caen</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Reims</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Nancy</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Strasbourg</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Paris</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Le_Mans</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Orleans</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Brest</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Saint_Nazaire</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Nantes</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Dijon</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs La_Rochelle</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Angouleme</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Lyon</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Grenoble</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Bordeaux</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Toulouse</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Pau</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Montpellier</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Aix_en_provence</button>
+				<button class="dropdown-item" type="button">CESI École d’Ingénieurs Nice</button>
 			</div>
 		</div>
 		</div>

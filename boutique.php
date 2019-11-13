@@ -94,7 +94,6 @@
                 <div class="col-md-3">
                     <!-- bbb_deals -->
                     <div class="bbb_deals">
-                        <div class="ribbon ribbon-top-right"><span>HOT</span></div>
                         <div class="bbb_deals_slider_container">
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="assets/images/sweat.png"
@@ -105,7 +104,7 @@
 
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <div class="bbb_deals_item_category"><a href="sweat.php">Sweats</a></div>
+                                        <div class="bbb_deals_item_category"><a href="boutique_categories#sweat">Sweats</a></div>
                                     </div>
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
                                         <a href="index.php">
@@ -129,7 +128,7 @@
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <div class="bbb_deals_item_category"><a href="#">Pulls</a></div>
+                                        <div class="bbb_deals_item_category"><a href="boutique_categories#pulls">Pulls</a></div>
                                     </div>
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
                                         <a href="index.php">
@@ -153,7 +152,7 @@
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <div class="bbb_deals_item_category"><a href="#">Tasses</a></div>
+                                        <div class="bbb_deals_item_category"><a href="boutique_categories#tasses">Tasses</a></div>
                                     </div>
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
                                         <a href="index.php">
@@ -177,7 +176,7 @@
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <div class="bbb_deals_item_category"><a href="#">Clés USB</a></div>
+                                        <div class="bbb_deals_item_category"><a href="boutique_categories#usb">Clés USB</a></div>
                                     </div>
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
                                         <a href="index.php">
@@ -209,7 +208,6 @@
 </script>
 <script src="https://code.jquery.com/jquery-1.12.3.js" integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="
     crossorigin="anonymous"></script>
-<script src="assets/js/categories.js"></script>
 <script src="assets/js/javaS2.js"></script>
 
 </html>

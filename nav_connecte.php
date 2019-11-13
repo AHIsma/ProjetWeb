@@ -34,7 +34,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link nav_boutique active" href="">BOUTIQUE</a>
+                        <a class="nav-item nav-link nav_boutique" href="">BOUTIQUE</a>
                         <a class="nav-item nav-link nav_activites" href="">ACTIVITÉS</a>
                         <a class="nav-item nav-link nav_blog" href="">BLOG</a>
                     </div>

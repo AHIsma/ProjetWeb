@@ -33,7 +33,7 @@ if (!$requete->fetch())
     $requete->bindValue(':gender', $sexe, PDO::PARAM_STR);
     $requete->bindValue(':tel', $tel, PDO::PARAM_STR);
     
-    header('Location: connexion.php');
+    header('Location: ../connexion.php');
     $requete->execute();
 }
 else{

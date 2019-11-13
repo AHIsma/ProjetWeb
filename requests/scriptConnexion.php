@@ -27,7 +27,7 @@ elseif ($ligne && $ligne['Status'] === '3') {
 }
 else
 {
-    $ligne? header('Location: boutique_connecte.php') : header('Location: connexion_echouee.php');
+    $ligne? header('Location: ../boutique.php') : header('Location: ../connexion_echouee.php');
 }
 // Fermeture de la connexion
 $requete->closeCursor();
