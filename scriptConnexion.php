@@ -1,7 +1,7 @@
 <?php
 
-// Adapter dbname et mot de passe si besoin
-$bdd = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root','');
+include 'connexionBdd.php';
+
 // Récupération des données utilisateurs
 $e_mail = isset($_POST['email']) ? $_POST['email']: NULL;
 $mot_DePasse = isset($_POST['motDePasse']) ? $_POST['motDePasse']: NULL;
@@ -18,9 +18,11 @@ $ligne=$requete->fetch();
 
 if($ligne && $ligne['Status'] === '1'){
  	if(!isset($_SESSION)){
+
     	session_start();
     }  
- 		$_SESSION['Ville'] = $ligne['Ville'];
+
+    $_SESSION['Ville'] = $ligne['Ville'];
  	echo "vous etes un etudiant";
  	header('Location: /ProjetWeb/boutique.php');
  	
@@ -33,16 +35,15 @@ elseif ($ligne && $ligne['Status'] === '2') {
     } 			
     
     $_SESSION['Ville'] = $ligne['Ville'];
-    		
-		echo "vous etes un personnel";
-		header('Location: /ProjetWeb/boutique.php');
+	echo "vous etes un personnel";
+	header('Location: /ProjetWeb/boutique.php');
 		
     exit();
 }
 elseif ($ligne && $ligne['Status'] === '3') {
 		if(!isset($_SESSION)){
-    	session_start();
-    } 
+	    	session_start();
+	    } 
  			$_SESSION['Ville'] = $ligne['Ville'];
     		
 		echo "vous etes un personnel";
