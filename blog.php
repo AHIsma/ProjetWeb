@@ -24,7 +24,7 @@
 <body class="body_blog">
     <header>
         <?php
-            include 'nav_nonconnecte.php';
+            include 'requests/scriptOnlineOffline.php';
         ?>
     </header>
 

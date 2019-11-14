@@ -15,15 +15,17 @@
 <body class="body_boutique">
     <header>
     <?php
-            include 'nav_nonconnecte.php';
+            include 'requests/scriptOnlineOffline.php';
         ?>
     </header>
 
     <main class="main_boutique">
         <div class="search-container">
-            <form class="search" action="action_page.php">
-                <input type="text" placeholder="RECHERCHE" name="search">
+            <form autocomplete="off" class="search" action="boutique_categories">
+                <div class="autocomplete" >
+                <input id="myInput" type="text" placeholder="RECHERCHE" name="id">
                 <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
             </form>
         </div>
 
@@ -41,9 +43,6 @@
                         <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry. Lorem Ipsum has
                             been the industry's standard dummy.</p>
-                        <form action="http://google.com">
-                            <input class="voir_plus_top" type="submit" value="VOIR PLUS" />
-                        </form>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -53,9 +52,6 @@
                         <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry. Lorem Ipsum has
                             been the industry's standard dummy.</p>
-                        <form action="http://google.com">
-                            <input class="voir_plus_top" type="submit" value="VOIR PLUS" />
-                        </form>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -65,9 +61,6 @@
                         <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry. Lorem Ipsum has
                             been the industry's standard dummy.</p>
-                        <form action="http://google.com">
-                            <input class="voir_plus_top" type="submit" value="VOIR PLUS" />
-                        </form>
                     </div>
                 </div>
             </div>

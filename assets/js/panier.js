@@ -40,3 +40,4 @@ console.log(prix_total[2]);
 if(prix_total[2] == "0") {
     $('.payer').hide();
 }
+

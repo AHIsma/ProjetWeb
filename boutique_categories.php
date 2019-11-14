@@ -15,7 +15,7 @@
 <body class="body_boutique">
     <header>
     <?php
-            include 'nav_nonconnecte.php';
+            include 'requests/scriptOnlineOffline.php';
         ?>
     </header>
 

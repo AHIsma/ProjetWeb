@@ -1,6 +1,13 @@
         <div class="nav_connecte">
             <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between ml-auto">
                 <ul class="navbar-nav  ml-auto flex-row">
+                <?php
+                    if(isset($_SESSION['status_bde']) && $_SESSION['status_bde'] == "2") 
+                    {
+                        echo '<li class="nav-item"><a class="nav-link" href="panier.php"><i class="fa fa-edit"></i></a></li>';
+                    }
+
+                ?>
                     <li class="nav-item">
                         <a class="nav-link" href="panier.php"><i class="fa fa-shopping-cart"></i></a>
                     </li>
