@@ -55,6 +55,11 @@
                                             <input type="file" class="custom-file-input" id="customFile">
                                             <label class="custom-file-label" for="customFile">Charger l'image</label>
                                         </div>
+                                        <select name="evenement_participe">
+                                            <option value="volvo">Soirée bowling</option>
+                                            <option value="saab">Soirée gaming</option>
+                                            <option value="fiat">Futsal</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="btn-toolbar justify-content-between">
