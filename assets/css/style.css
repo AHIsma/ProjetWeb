@@ -367,7 +367,13 @@ ul.voir_plus_bdecesicampus li:active {
 .voir_plus_scroll {
     margin-top: 2%;
     color: #F4AB25;
+    border: none;
     border-bottom: 2px solid #F4AB25;
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .voir_plus_scroll:hover {
