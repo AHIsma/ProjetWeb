@@ -48,7 +48,8 @@
 
                 <!-- liste des produits -->
         <?php
-            if ($_GET['id'] ===  "passee") {
+
+            if (isset($_GET['id']) && $_GET['id'] ===  "passee") {
              include 'generate_activites_past.php';
            }   
              

@@ -20,6 +20,9 @@ if($ligne && $ligne['Status'] === '1'){
  	if(!isset($_SESSION)){
     session_start();} 
  		$_SESSION['Ville'] = $ligne['Ville'];
+ 		$_SESSION['Id_user']= $ligne['Id'];
+ 		$_SESSION['Nom']= $ligne['Nom'];
+ 		$_SESSION['Prenom']= $ligne['Prenom'];
  	echo "vous etes un etudiant";
  	header('Location: /ProjetWeb/boutique.php');
  	
@@ -30,7 +33,7 @@ elseif ($ligne && $ligne['Status'] === '2') {
 		if(!isset($_SESSION)){
     session_start();}
  			$_SESSION['Ville'] = $ligne['Ville'];
-    		
+ 			$_SESSION['Id_user']= $ligne['Id'];
 		echo "vous etes un personnel";
 		header('Location: /ProjetWeb/boutique.php');
 		
@@ -40,7 +43,7 @@ elseif ($ligne && $ligne['Status'] === '3') {
 		if(!isset($_SESSION)){
     session_start();}
  			$_SESSION['Ville'] = $ligne['Ville'];
-    		
+    		$_SESSION['Id_user']= $ligne['Id'];
 		echo "vous etes un personnel";
 		header('Location: /ProjetWeb/boutique.php');
 		

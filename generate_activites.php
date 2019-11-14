@@ -15,7 +15,7 @@ $requete = $bdd->prepare("SELECT * FROM  evenement WHERE Ville = :ville AND Date
                         <div class="bbb_deals_slider_container">
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="' . $ligne['Images'] . '"
-                                        alt=""><a href="index.php" class="panier" style="display: none;">
+                                        alt=""><a href="scriptInscriptionEvenement.php?id_evenement=' . $ligne['ID'] . '" class="panier" style="display: none;">
                                         <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
