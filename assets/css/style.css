@@ -22,7 +22,7 @@
 .body_boutique,
 .body_connecter_inscrire,
 .body_activites,
-.body_panier {
+.body_panier, .body_blog {
     background-image: url("../images/fond.png");
     background-size: cover;
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
@@ -690,6 +690,72 @@ footer .liens a {
     color: white;
     background-color: #515C6F;
     font-weight: 900;
+}
+
+/* PAGE BLOG */
+
+.body_blog .row {
+    justify-content: center;
+}
+.body_blog .h7 {
+    font-size: 0.8rem;
+}
+
+.body_blog .gedf-wrapper {
+    margin-top: 0.97rem;
+}
+
+.body_blog .image_poste {
+    width: 30%;
+}
+
+.body_blog .thumbnail {
+    padding:0px;
+}
+.body_blog .panel {
+	position:relative;
+}
+.body_blog .panel>.panel-heading:after,.panel>.panel-heading:before{
+	position:absolute;
+	top:11px;left:-29px;
+	right:100%;
+	width:0;
+	height:0;
+	display:block;
+	content:" ";
+	border-color:transparent;
+	border-style:solid solid outset;
+	pointer-events:none;
+}
+.body_blog .panel>.panel-heading:after{
+	border-width:7px;
+	border-right-color:#f7f7f7;
+}
+.body_blog .panel>.panel-heading:before{
+	border-right-color:#ddd;
+	border-width:8px;
+}
+
+.body_blog .comment {
+    background-color: #e0e0e09f;
+    margin: 1em;
+}
+
+.newCommentForm {
+    justify-content: center;
+}
+
+.newCommentForm .newcomment {
+    border: none;
+    font-size: 0.9em;
+    margin-right: 5em;
+}
+
+@media (min-width: 576px) {
+.col-sm-8 {
+    flex: none;
+    max-width: 95%;
+}
 }
 
 

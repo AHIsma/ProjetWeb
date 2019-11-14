@@ -22,7 +22,7 @@
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link nav_boutique" href="boutique.php">BOUTIQUE</a>
                 <a class="nav-item nav-link nav_activites" href="activites.php">ACTIVITÉS</a>
-                <a class="nav-item nav-link nav_blog" href="">BLOG</a>
+                <a class="nav-item nav-link nav_blog" href="blog.php">BLOG</a>
             </div>
         </div>
     </nav>
