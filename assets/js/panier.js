@@ -32,3 +32,11 @@ $('.plus-btn').on('click', function (e) {
 $('.action').click(function () {
     $(this).parent().remove();
 });
+
+var prix_total = $(".total-price").text().split(' ');
+
+console.log(prix_total[2]);
+
+if(prix_total[2] == "0") {
+    $('.payer').hide();
+}

@@ -2,7 +2,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between ml-auto">
                 <ul class="navbar-nav  ml-auto flex-row">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <a class="nav-link" href="panier.php"><i class="fa fa-shopping-cart"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link deco" href="#" data-toggle="modal" data-target=".bs-example-modal-sm"><i

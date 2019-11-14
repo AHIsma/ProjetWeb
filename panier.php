@@ -16,6 +16,9 @@
 
     <main class="main_panier">
 
+        <form class="retour_arriere">
+            <input class="button_retour" type="button" value="Retour" onclick="history.go(-1)">
+        </form>
         <div class="table">
             <div class="wrap">
 
@@ -93,7 +96,7 @@
             </div>
         </div>
 
-        <div class="total-price">Prix total: 80 €</div>
+        <div class="total-price">Prix total: 120 €</div>
         <div class="payer">PAYER</div>
 
     </main>

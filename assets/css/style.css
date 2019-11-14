@@ -22,7 +22,8 @@
 .body_boutique,
 .body_connecter_inscrire,
 .body_activites,
-.body_panier, .body_blog {
+.body_panier,
+.body_blog {
     background-image: url("../images/fond.png");
     background-size: cover;
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
@@ -686,7 +687,34 @@ footer .liens a {
     padding-top: 1%;
     padding-bottom: 1%;
 }
+
 .body_panier .payer:hover {
+    color: white;
+    background-color: #515C6F;
+    font-weight: 900;
+}
+
+.retour_arriere {
+    display: flex;
+    justify-content: left;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.retour_arriere .button_retour {
+    background-color: #F4AB25;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.retour_arriere .button_retour:hover {
     color: white;
     background-color: #515C6F;
     font-weight: 900;
@@ -697,6 +725,7 @@ footer .liens a {
 .body_blog .row {
     justify-content: center;
 }
+
 .body_blog .h7 {
     font-size: 0.8rem;
 }
@@ -710,30 +739,36 @@ footer .liens a {
 }
 
 .body_blog .thumbnail {
-    padding:0px;
+    padding: 0px;
 }
+
 .body_blog .panel {
-	position:relative;
+    position: relative;
 }
-.body_blog .panel>.panel-heading:after,.panel>.panel-heading:before{
-	position:absolute;
-	top:11px;left:-29px;
-	right:100%;
-	width:0;
-	height:0;
-	display:block;
-	content:" ";
-	border-color:transparent;
-	border-style:solid solid outset;
-	pointer-events:none;
+
+.body_blog .panel>.panel-heading:after,
+.panel>.panel-heading:before {
+    position: absolute;
+    top: 11px;
+    left: -29px;
+    right: 100%;
+    width: 0;
+    height: 0;
+    display: block;
+    content: " ";
+    border-color: transparent;
+    border-style: solid solid outset;
+    pointer-events: none;
 }
-.body_blog .panel>.panel-heading:after{
-	border-width:7px;
-	border-right-color:#f7f7f7;
+
+.body_blog .panel>.panel-heading:after {
+    border-width: 7px;
+    border-right-color: #f7f7f7;
 }
-.body_blog .panel>.panel-heading:before{
-	border-right-color:#ddd;
-	border-width:8px;
+
+.body_blog .panel>.panel-heading:before {
+    border-right-color: #ddd;
+    border-width: 8px;
 }
 
 .body_blog .comment {
@@ -752,10 +787,10 @@ footer .liens a {
 }
 
 @media (min-width: 576px) {
-.col-sm-8 {
-    flex: none;
-    max-width: 95%;
-}
+    .col-sm-8 {
+        flex: none;
+        max-width: 95%;
+    }
 }
 
 
