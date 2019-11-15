@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="favicon.png" />
-    <title>BDE CESI REIMS</title>
+    <title>BOUTIQUE BDE CESI</title>
 </head>
 
 <body class="body_boutique">
     <header>
+<!-- <<<<<<< HEAD
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <!-- TITRE DYNAMIQUE -->
-            <a class="navbar-brand" href="#"><?php include 'generate_title.php'?></a>
+            TITRE DYNAMIQUE
+            <a class="navbar-brand" href="#"><?php //include 'generate_title.php'?></a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -30,7 +31,13 @@
                 </div>
             </div>
         </nav>
+======= -->
+    <?php
+            include 'nav_connecte.php';
+        ?>
+<!-- >>>>>>> origin/blog -->
     </header>
+
     <main class="main_boutique">
         <div class="search-container">
             <form class="search" action="action_page.php">
@@ -98,15 +105,14 @@
         </form>
 
         <div id="articles" class="container mydiv">
-        <?php
-            include 'categories.php';
+            <?php
+            include 'nav_categories.php';
         ?>
-        
-            <div class="row">
 
+            <div class="row">
                 <!-- liste des produits -->
          <?php
-            include 'generate_prods.php';
+            include 'requests/generate_prods.php';
         ?>
                 
             </div>

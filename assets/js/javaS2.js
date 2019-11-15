@@ -13,13 +13,3 @@ $(document).ready(function () {
         $(this).children(".panier").hide();
     });
 });
-
-// function bigImg(x) {
-//     x.style.height = "120%";
-//     x.style.width = "120%";
-// }
-
-// function normalImg(x) {
-//     x.style.height = "100%";
-//     x.style.width = "100%";
-// }*/

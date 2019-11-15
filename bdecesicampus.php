@@ -8,7 +8,7 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="icon" type="image/png" href="favicon.png" />
-	<title>BDE CESI REIMS</title>
+	<title>BDE CESI</title>
 </head>
 
 <body class="body_bdecesicampus">

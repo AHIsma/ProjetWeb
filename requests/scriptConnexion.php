@@ -1,6 +1,6 @@
 <?php
 
-include '/request/connexionBdd.php';
+include 'connexionBdd.php';
 
 // Récupération des données utilisateurs
 $e_mail = isset($_POST['email']) ? $_POST['email']: NULL;
@@ -26,10 +26,6 @@ if($ligne && $ligne['Status'] === '1'){
  	echo "vous etes un etudiant";
  	header('Location: /ProjetWeb/boutique.php');
  	
- 	/*if(!isset($_SESSION['Nom'])){
-    	header('Location:/ProjetWeb/connexion.php');
-		}*/
-
  exit();
 
 }
@@ -43,8 +39,6 @@ elseif ($ligne && $ligne['Status'] === '2') {
 		echo "vous etes un personnel";
 		header('Location: /ProjetWeb/boutique.php');
 		
-		
-
     exit();
 }
 elseif ($ligne && $ligne['Status'] === '3') {

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Neusa Next Std';
+    src: url('fonts/NeusaNextStd-Regular.otf') format('otf'),
+        url('fonts/NeusaNextStd-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'True Lies';
+    src: url('fonts/TrueLies.ttf');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +18,12 @@
 /* PAGE D'ACCUEIL */
 
 .body_index,
-.body_connexion {
+.body_connexion,
+.body_boutique,
+.body_connecter_inscrire,
+.body_activites,
+.body_panier,
+.body_blog {
     background-image: url("../images/fond.png");
     background-size: cover;
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
@@ -257,6 +273,26 @@ ul.voir_plus_bdecesicampus li:active {
 
 /* PAGE BOUTIQUE */
 
+
+/* NAVBAR BOUTIQUE */
+.nav_all .navbar-light .navbar-nav .nav-link {
+    color: black !important;
+    font-weight: bold;
+    width: 150px;
+    text-align: center;
+    background-color: #F4AB25;
+    border: 1px solid black;
+    margin-left: 2em;
+}
+
+.nav_all .navbar-light .navbar-nav .nav-link:hover {
+    background-color: #515C6F;
+    color: #fff !important;
+}
+
+
+/* BARRE DE RECHERCHE */
+
 .search {
     text-align: right;
     margin-right: 2em;
@@ -351,21 +387,8 @@ ul.voir_plus_bdecesicampus li:active {
     margin-top: 20px;
 }
 
-.bbb_background {
-    background-color: #E0E0E0 !important;
-}
-
-.ribbon span {
-    position: absolute;
-    display: block;
-    width: 25%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    background-color: #FF4858;
-    color: #fff;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-    text-transform: uppercase;
-    text-align: center;
+.bbb_deals {
+    background-color: rgba(255, 255, 255, 0.932) !important;
 }
 
 .bbb_deals_item .panier_icone {
@@ -375,10 +398,6 @@ ul.voir_plus_bdecesicampus li:active {
     margin-left: 25%;
     margin-top: -40%;
     text-align: center;
-}
-
-.ribbon-top-right span {
-    top: 30px;
 }
 
 .bbb_deals {
@@ -441,6 +460,9 @@ ul.voir_plus_bdecesicampus li:active {
     text-decoration: none;
 }
 
+
+/* NAVBAR CATEGORIES */
+
 .nav_categories .navbar-nav.navbar-center {
     position: absolute;
     left: 50%;
@@ -454,16 +476,13 @@ ul.voir_plus_bdecesicampus li:active {
     background: transparent !important;
 }
 
-.nav_categories .navbar-nav li > a {
-	text-transform: capitalize;
-	color: blue;
-	transition: background-color .2s, color .2s;
+.nav_categories .navbar-light .navbar-nav .nav-link:hover {
+    color: black !important;
+    opacity: 1;
 }
 
-.nav_categories .navbar-nav li.active > a {
-	border-bottom: 2px solid #33A0FF;
-	color: #fff;
-}
+
+/* FOOTER */
 
 .haut_footer {
     font-size: 75%;
@@ -509,6 +528,269 @@ ul.voir_plus_bdecesicampus li:active {
 
 .footer_all {
     font-family: "Neusa Next Std", "Arial Black", Arial, Verdana, sans-serif;
+}
+
+footer .liens a {
+    color: black;
+}
+
+
+/* NAVBAR SE CONNECTER & S'INSCRIRE */
+
+.nav_connexion_inscription .navbar {
+    background: black !important;
+}
+
+.nav_connexion_inscription .navbar-light .navbar-nav .nav-link {
+    margin-right: 2em;
+    font-size: 0.7em;
+    color: white !important;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+.nav_connexion_inscription .navbar-light .navbar-nav .nav-link:hover {
+    background-color: white;
+    color: black !important;
+}
+
+/* NAVBAR CONNECTE (PANIER + PROFILE) */
+
+.nav_connecte .navbar {
+    background: black !important;
+}
+
+.nav_connecte .navbar-light .navbar-nav .nav-link {
+    margin-right: 2em;
+    color: white !important;
+    border-radius: 25px;
+}
+
+/* PAGE SE CONNECTER S'INSCRIRE */
+
+.body_connecter_inscrire main {
+    text-align: center;
+    justify-content: center;
+}
+
+.button_connexion,
+.button_inscription {
+    cursor: pointer;
+    margin-bottom: 5%;
+    border: 1px solid black;
+    background-color: #F4AB25;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.button_connexion a,
+.button_inscription a {
+    color: white;
+    text-decoration: none;
+}
+
+.button_connexion:hover,
+.button_inscription:hover {
+
+    background-color: #515C6F;
+}
+
+
+/* PAGE PANIER */
+
+.body_panier {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.body_panier .table {
+    background: rgba(255, 255, 255, 0.726);
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.body_panier .item {
+    padding-top: 1%;
+    padding-bottom: 10%;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.body_panier .action {
+    display: inline-block;
+    Cursor: pointer;
+}
+
+.body_panier .action .del {
+    color: #FF4252;
+}
+
+.body_panier .image {
+    width: 9%;
+}
+
+.body_panier .name {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+}
+
+.body_panier .quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+}
+
+.body_panier button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    color: #33A0FF;
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.body_panier .size {
+    border: none;
+    color: white;
+    padding: 0.3em;
+    border-radius: 6px;
+    background-color: #F4AB25;
+}
+
+.body_panier .total-price {
+    text-align: right;
+    font-size: 2em;
+}
+
+.body_panier .payer {
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: #F4AB25;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.body_panier .payer:hover {
+    color: white;
+    background-color: #515C6F;
+    font-weight: 900;
+}
+
+.retour_arriere {
+    display: flex;
+    justify-content: left;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.retour_arriere .button_retour {
+    background-color: #F4AB25;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.retour_arriere .button_retour:hover {
+    color: white;
+    background-color: #515C6F;
+    font-weight: 900;
+}
+
+/* PAGE BLOG */
+
+.body_blog .row {
+    justify-content: center;
+}
+
+.body_blog .h7 {
+    font-size: 0.8rem;
+}
+
+.body_blog .gedf-wrapper {
+    margin-top: 0.97rem;
+}
+
+.body_blog .image_poste {
+    width: 30%;
+}
+
+.body_blog .thumbnail {
+    padding: 0px;
+}
+
+.body_blog .panel {
+    position: relative;
+}
+
+.body_blog .panel>.panel-heading:after,
+.panel>.panel-heading:before {
+    position: absolute;
+    top: 11px;
+    left: -29px;
+    right: 100%;
+    width: 0;
+    height: 0;
+    display: block;
+    content: " ";
+    border-color: transparent;
+    border-style: solid solid outset;
+    pointer-events: none;
+}
+
+.body_blog .panel>.panel-heading:after {
+    border-width: 7px;
+    border-right-color: #f7f7f7;
+}
+
+.body_blog .panel>.panel-heading:before {
+    border-right-color: #ddd;
+    border-width: 8px;
+}
+
+.body_blog .comment {
+    background-color: #e0e0e09f;
+    margin: 1em;
+}
+
+.newCommentForm {
+    justify-content: center;
+}
+
+.newCommentForm .newcomment {
+    border: none;
+    font-size: 0.9em;
+    margin-right: 5em;
+}
+
+@media (min-width: 576px) {
+    .col-sm-8 {
+        flex: none;
+        max-width: 95%;
+    }
 }
 
 
@@ -581,13 +863,17 @@ ul.voir_plus_bdecesicampus li:active {
         text-align: center;
     }
 
-    
+    .nav_categories .navbar-light .navbar-nav .nav-link {
+        margin-right: 1em;
+    }
+
+
 
 }
 
 
 @media screen and (max-width: 772px) {
-    
+
     .bbb_deals_item .panier_icone {
         font-size: 10em !important;
         margin-left: 30%;

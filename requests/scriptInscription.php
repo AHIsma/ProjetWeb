@@ -33,11 +33,12 @@
             $requete->bindValue(':gender', $sexe, PDO::PARAM_STR);
             $requete->bindValue(':tel', $tel, PDO::PARAM_STR);
     
-            include 'connexion.php';
-            $requete->execute();
-        }
 
-    else{
-            echo "Vous etes deja parmi nous!";
-        }
+    header('Location: ../connexion.php');
+    $requete->execute();
+}
+else{
+  echo "Vous etes deja parmi nous!";
+}
+
 ?>

@@ -18,11 +18,11 @@
         <div class="haut_footer">
             <div class="cesi_footer">
                 <img src="assets/images/logo_cesi.png" width="60%" alt="Logo Cesi Ecole d'ingénieurs">
-                <p>Fruit du rapprochement de l'EI Cesi et de l'exia.CESI, CESI École d'ingénieurs permet à chaque élève
+                <p><br>Fruit du rapprochement de l'EI Cesi et de l'exia.CESI, CESI École d'ingénieurs permet à chaque élève
                     ingénieur-e de construire un parcours personnalisé dont il est acteur, grâce à une école en cinq
                     ans,
                     sous
-                    statut étudiant, en apprentissage ou en formation continue : 33 options et 25 campus en France.</p>
+                    statut étudiant, en apprentissage ou en formation continue: 33 options et 25 campus en France.</p>
             </div>
             <div class="about_footer">
                 <h2>A propos de nous</h2>
@@ -52,8 +52,8 @@
             </div>
             <div class="paiements">
                 <img src="assets/images/logo_mastercard.png" alt="Logo Mastercard" width="50px">
-                <img src="assets/images/logo_paypal.png" alt="Logo Paypal" width="50px">
                 <img src="assets/images/logo_visa.png" alt="Logo Visa" width="50px">
+                <img src="assets/images/logo_paypal.png" alt="Logo Paypal" width="50px">
             </div>
         </div>
     </div>

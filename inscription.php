@@ -15,7 +15,7 @@
 <body class="body_connexion">
 
     <main>
-        <form id="login" method="post" action="scriptInscription.php" autocomplete="on">
+        <form id="login" method="post" action="requests/scriptInscription.php" autocomplete="on">
             <h1 class="titre_connexion">INSCRIPTION</h1>
             <div class="form_connex">
                 <p class="email_connexion">

@@ -9,32 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="favicon.png" />
-    <title>Connexion</title>
+    <title>SE CONNECTER / S'INSCRIRE</title>
 </head>
 
-<body class="body_connexion">
+<body class="body_connecter_inscrire">
 
     <main>
-            <form id="login" method="post" action="requests/scriptConnexion.php" autocomplete="on">
-                <h1 class="titre_connexion">CONNEXION</h1>
-                <div class="form_connex">
-                    <p class="email_connexion">
-                        <label for="username" class="uname" data-icon="u"> EMAIL </label><br>
-                        <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-                        <input id="username" name="email" required="required" type="text"
-                            placeholder="janedoe123@email.com" />
-                    </p>
-                    <p class="pass_connexion">
-                        <label for="password" class="youpasswd" data-icon="p"> MOT DE PASSE </label><br>
-                        <i class="fa fa-key fa-lg fa-fw" aria-hidden="true"></i>
-                        <input id="password" name="motDePasse" required="required" type="password"
-                            placeholder="************************" />
-                    </p>
-                </div>
-                <p class="login button_connex">
-                    <input type="submit" value="SE CONNECTER       &gt" />
-                </p>
-            </form>
+    
+        <div class="button_connexion">
+            <a href="connexion.php"> SE CONNECTER</a>
+        </div>
+        <div class="button_inscription">
+            <a href="inscription.php"> S'INSCRIRE</a>
+        </div>
 
     </main>
 
