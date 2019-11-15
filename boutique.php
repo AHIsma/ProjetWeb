@@ -29,50 +29,9 @@
             </form>
         </div>
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="assets/images/top1.png" alt="Sweat CESI REIMS">
-                    <div class="carousel-caption">
-                        <h3>Sweat a capuche</h3>
-                        <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's standard dummy.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/images/top2.png" alt="Tasse CESI REIMS">
-                    <div class="carousel-caption">
-                        <h3>Tasse</h3>
-                        <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's standard dummy.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/images/top3.png" alt="USB CESI REIMS">
-                    <div class="carousel-caption">
-                        <h3>USB</h3>
-                        <p class="d-none d-md-block">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's standard dummy.</p>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+        <?php
+            include 'requests/scriptCarousel.php';
+        ?>
 
         <form class="form_scroll" action="#articles">
             <input class="voir_plus_top voir_plus_scroll" type="submit" value="PLUS DE PRODUITS" />
@@ -91,8 +50,12 @@
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="assets/images/sweat.png"
                                         alt="">
-                                    <a href="panier.php" class="panier" style="display: none;">
-                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a>
+                                        <?php
+                                        if(isset($_SESSION['enligne']) && $_SESSION['enligne'] == "1") {
+                                    echo '<a href="panier.php" class="panier" style="display: none;">
+                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a>';
+                                        }
+                                    ?>
                                 </div>
 
                                 <div class="bbb_deals_content">
