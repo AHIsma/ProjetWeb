@@ -28,7 +28,7 @@
         </div>
 
         <div class="total-price">Prix total: 120 €</div>
-        <div class="payer">PAYER</div>
+        <div href="#" class="payer">PAYER</div>
 
     </main>
 

@@ -12,7 +12,7 @@ $requete = $bdd->prepare("SELECT * FROM paniers WHERE Id_user = :Id_user");
                     <span class="name">'.$ligne['Designation'].'</span>
                     <span class="price">'.$ligne['Prix'].'€ </span>
                     <span class="action">
-                        <a href="" class="del"><i class="fa fa-trash"></i></a>
+                        <a href="requests/scriptSupprLignePanier_bdd.php?idEvenement=' . $ligne['Id_evenement'] . '" class="del"><i class="fa fa-trash"></i></a>
                     </span>
                   </div>';
         }
