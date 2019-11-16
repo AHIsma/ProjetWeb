@@ -10,7 +10,7 @@
                     </div>
                     <div class="panel-body">
                         <form class="newCommentForm">
-                            <input class="newcomment" type="text" placeholder="Postez un commentaire" />
+                            <input class="newcomment" type="text" name="commentaire" placeholder="Postez un commentaire" />
                             <input type="image" src="assets/images/send.png" alt="Add" />
                         </form>
                     </div>

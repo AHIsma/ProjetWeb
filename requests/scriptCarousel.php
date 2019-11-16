@@ -23,21 +23,21 @@ $ligne=$requetee->fetchAll();
                         <img class="d-block w-100" src="assets/images/top1.png" alt="fondtop1">
                         <img class="carousel-caption ml-auto" src="'.$ligne[0][1].'" alt="Top vente 1">
                         <div class="carousel-caption">
-                            <h3>'.$ligne[0][0].'</h3>
+                            <h3>'.htmlspecialchars($ligne[0][0]).'</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="assets/images/top2.png" alt="fondtop2">
                         <img class="carousel-caption ml-auto" src="'.$ligne[1][1].'" alt="Top vente 2">
                         <div class="carousel-caption">
-                            <h3>'.$ligne[1][0].'</h3>
+                            <h3>'.htmlspecialchars($ligne[1][0]).'</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="assets/images/top3.png" alt="fondtop3">
                         <img class="carousel-caption ml-auto" src="'.$ligne[2][1].'" alt="Top vente 3">
                         <div class="carousel-caption">
-                            <h3>'.$ligne[2][0].'</h3>
+                            <h3>'.htmlspecialchars($ligne[2][0]).'</h3>
                         </div>
                     </div>
                 </div>

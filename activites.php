@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="favicon.png" />
-    <title>ACTIVITÉS</title>
+    <title>ACTIVITÉS BDE CESI</title>
 </head>
 
 <body class="body_activites">

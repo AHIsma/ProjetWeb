@@ -14,6 +14,11 @@
 
 <body class="footer_all">
 <footer>
+
+<?php
+            include 'cookies.php';
+        ?>
+
     <div class="conteneur_footer">
         <div class="haut_footer">
             <div class="cesi_footer">

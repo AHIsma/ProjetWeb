@@ -46,6 +46,10 @@
 			</div>
 		</aside>
 	</main>
+
+	<?php
+            include 'cookies.php';
+        ?>
 	<footer class="footer_bdecesicampus">
 		<p>Suivez-nous !</p>
 		<ul class="sociaux">
