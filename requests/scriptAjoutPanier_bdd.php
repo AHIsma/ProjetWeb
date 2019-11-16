@@ -11,6 +11,12 @@ $requete = $bdd->prepare("SELECT * FROM paniers WHERE `Id_evenement`=:Id_eveneme
         $requete->execute();
 
     if (!$requete->fetch()){
+    	$requete = $bdd->prepare("INSERT INTO commande (id_user, nom, prenom, email, id_evenement, designation, prix, Images) SELECT ET.Id as Id_user, ET.Nom as Nom, ET.Prenom as Prenom, ET.Email as email, ev.ID as Id_evenement, ev.Designation as Designation, ev.Prix as Prix, ev.Images as Images
+		FROM etudiantinscrit ET INNER JOIN evenement ev
+		WHERE `et`.`Id` =:Id_user AND `ev`.`ID`=:Id_evenement");
+		$requete->bindvalue(':Id_user', $_SESSION['Id_user'], PDO::PARAM_STR);
+		$requete->bindvalue(':Id_evenement', $_GET['id_evenement'], PDO::PARAM_STR);
+		$requete->execute();
 
 		$requete = $bdd->prepare("INSERT INTO paniers SELECT ET.Id as Id_user, ET.Nom as Nom, ET.Prenom as Prenom, ET.Email as email, ev.ID as Id_evenement, ev.Designation as Designation, ev.Prix as Prix, ev.Images as Images
 		FROM etudiantinscrit ET INNER JOIN evenement ev

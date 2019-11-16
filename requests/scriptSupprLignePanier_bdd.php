@@ -7,7 +7,13 @@ $requete = $bdd->prepare("DELETE FROM paniers
 WHERE Id_evenement=:Id_evenement");
         $requete->bindvalue(':Id_evenement', $_GET['idEvenement'], PDO::PARAM_STR);
         $requete->execute();
+       	
+$requete = $bdd->prepare("DELETE FROM commande 
+WHERE id_evenement=:Id_evenement");
+        $requete->bindvalue(':Id_evenement', $_GET['idEvenement'], PDO::PARAM_STR);
+        $requete->execute();
        	header('Location: /ProjetWeb/panier.php');
+
 ?>
 
 

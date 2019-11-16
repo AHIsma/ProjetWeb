@@ -28,7 +28,7 @@
         </div>
 
         <div class="total-price">Prix total: 120 €</div>
-        <div href="#" class="payer">PAYER</div>
+       <a href="requests/scriptPayementPanier.php"> <div class="payer">PAYER</div><a/>
 
     </main>
 
