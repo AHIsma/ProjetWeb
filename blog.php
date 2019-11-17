@@ -34,175 +34,46 @@
                 <div class="col-md-6 gedf-main">
 
                     <!--- \\\\\\\Post-->
-                    <div class="card gedf-card">
-                        <div class="card-header">
-                            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
-                                        aria-controls="posts" aria-selected="true">Poster une photo</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-body">
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="posts" role="tabpanel"
-                                    aria-labelledby="posts-tab">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="message">post</label>
-                                        <textarea class="form-control" id="message" rows="3"
-                                            placeholder="Tu peux poster et discuter avec les autres participants sur des évènement auxquels t'as déjà participer ....."></textarea>
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFile">
-                                            <label class="custom-file-label" for="customFile">Charger l'image</label>
-                                        </div>
-                                        <select name="evenement_participe">
-                                            <option value="volvo">Soirée bowling</option>
-                                            <option value="saab">Soirée gaming</option>
-                                            <option value="fiat">Futsal</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="btn-toolbar justify-content-between">
-                                    <div class="btn-group">
-                                        <button type="submit" class="btn btn-primary">poster</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Post /////-->
-
-                        <!--- \\\\\\\Post-->
+                    <form action="requests/scriptTo_post.php" method="POST" enctype="multipart/form-data">    
                         <div class="card gedf-card">
                             <div class="card-header">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="ml-2">
-                                            <div class="h5 m-0">Nom Prénom</div>
-                                            <div class="h7 text-muted">Nom de l'évènement</div>
-                                        </div>
-                                    </div>
-                                    <!-- BOUTON SIGNALER POUR LES PERSO -->
-                                    <!-- <div>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-ellipsis-h"></i>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                                <a class="dropdown-item" href="#">Signaler</a>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
-
+                                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
+                                            aria-controls="posts" aria-selected="true">Poster une photo</a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="card-body">
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem
-                                    eos
-                                    ipsa praesentium esse magnam nemo dolor
-                                    sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
-                                </p>
-                                <img class="image_poste" src="assets/images/sweat.png">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="posts" role="tabpanel"
+                                        aria-labelledby="posts-tab">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="message">post</label>
+                                            <textarea class="form-control" id="message" name="message" rows="3"
+                                                placeholder="Tu peux poster et discuter avec les autres participants sur des évènement auxquels t'as déjà participer ....."></textarea>
+                                            <div class="custom-file">
+                                                <input type="file" name="image" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" for="customFile">Charger l'image</label>
+                                            </div>
+                                            <select name="evenement_participe">
+                                                <!-- on doit faire un include évenement passé -->
+                                                <?php include'scriptTo_postListeEvenement.php' ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="btn-toolbar justify-content-between">
+                                        <div class="btn-group">
+                                            <input type="submit" class="btn btn-primary" value="poster"/>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-footer">
-                                <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                                <a href="#newcommentaire" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                            </div>
-                            <?php
-                                include 'commentaires.php';
-                            ?>
-                        </div>
-                        <!-- Post /////-->
-
+                    </form>                        
 
                         <!--- \\\\\\\Post-->
-                        <div class="card gedf-card">
-                            <div class="card-header">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="ml-2">
-                                            <div class="h5 m-0">Nom Prénom</div>
-                                            <div class="h7 text-muted">Nom de l'évènement</div>
-                                        </div>
-                                    </div>
-                                    <!-- BOUTON SIGNALER POUR LES PERSO -->
-                                    <!-- <div>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-ellipsis-h"></i>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                                <a class="dropdown-item" href="#">Signaler</a>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
-
-                            </div>
-                            <div class="card-body">
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem
-                                    eos
-                                    ipsa praesentium esse magnam nemo dolor
-                                    sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
-                                </p>
-                                <img class="image_poste" src="assets/images/sweat.png">
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                                <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                            </div>
-                        </div>
+                        <?php include 'requests/script_publication.php'; ?>
                         <!-- Post /////-->
-
-
-                        <!--- \\\\\\\Post-->
-                        <div class="card gedf-card">
-                            <div class="card-header">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="ml-2">
-                                            <div class="h5 m-0">Nom Prénom</div>
-                                            <div class="h7 text-muted">Nom de l'évènement</div>
-                                        </div>
-                                    </div>
-                                    <!-- BOUTON SIGNALER POUR LES PERSO -->
-                                    <!-- <div>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-ellipsis-h"></i>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                                <a class="dropdown-item" href="#">Signaler</a>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
-
-                            </div>
-                            <div class="card-body">
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem
-                                    eos
-                                    ipsa praesentium esse magnam nemo dolor
-                                    sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
-                                </p>
-                                <img class="image_poste" src="assets/images/sweat.png">
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                                <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                            </div>
-                        </div>
-                        <!-- Post /////-->
-
-
 
                     </div>
                 </div>
