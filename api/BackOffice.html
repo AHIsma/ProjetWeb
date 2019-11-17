@@ -142,6 +142,26 @@
                         <input type="button" onclick="sendFormFlagEvent()" value="Envoyer" />
                     </div>
                 </div>
+                <div class="flagComments">
+                    <div>
+                        <h2>Signaler un commentaire :</h2>
+                    </div>
+                    <div>
+                        ID du commentaire : <input type="number" id="idFC" />
+                    </div>
+                    <div>
+                        <form>
+                            <select size="2" id="typeFC">
+                                <option>Signaler</option>
+                                <option>Enlever le signalement</option>
+                            </select>
+                        </form>
+                        <!--Type de signalement : <input type="number" id="typeFP" />-->
+                    </div>
+                    <div>
+                        <input type="button" onclick="sendFormFlagComment()" value="Envoyer" />
+                    </div>
+                </div>
             </div>
             <div class="articles">
                 <div class="addArticles">
