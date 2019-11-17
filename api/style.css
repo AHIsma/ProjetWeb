@@ -28,6 +28,12 @@
     justify-content: center;
 }
 
+.comments
+{
+	display: flex;
+	justify-content: center;
+}
+
 /*body
 {
     color: white;
