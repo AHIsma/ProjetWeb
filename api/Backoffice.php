@@ -24,13 +24,16 @@
                         Nom de l'événement : <input type="text" id="nameAE" />
                     </div>
                     <div>
-                        Description de l'événement : <input type="text" id="descAE" />
-                    </div>
-                    <div>
                         Date de l'événement : <input type="date" id="dateAE" />
                     </div>
                     <div>
                         Prix d'entrée de l'événement : <input type="number" id="priceAE" />
+                    </div>
+                    <div>
+                        Ville de l'événement : <input type="text" id="cityAE" />
+                    </div>
+                    <div>
+                        Image de l'événement (URL) : <input type="text" id="picAE" />
                     </div>
                     <div>
                         <input type="button" onclick="sendFormAddEvent()" value="Envoyer" />
@@ -58,13 +61,16 @@
                         Nom de l'événement : <input type="text" id="nameEE" />
                     </div>
                     <div>
-                        Description de l'événement : <input type="text" id="descEE" />
-                    </div>
-                    <div>
                         Date de l'événement : <input type="date" id="dateEE" />
                     </div>
                     <div>
                         Prix d'entrée de l'événement : <input type="number" id="priceEE" />
+                    </div>
+                    <div>
+                        Ville de l'événement : <input type="text" id="cityEE" />
+                    </div>
+                    <div>
+                        Image de l'événement (URL) : <input type="text" id="picEE" />
                     </div>
                     <div>
                         <input type="button" onclick="sendFormEditEvent()" value="Envoyer" />
@@ -80,10 +86,19 @@
                         Nom du produit : <input type="text" id="nameAP" />
                     </div>
                     <div>
-                        Description du produit : <input type="text" id="descAP" />
+                        Prix du produit : <input type="number" id="priceAP" />
                     </div>
                     <div>
-                        Prix du produit : <input type="number" id="priceAP" />
+                        Taille du produit : <input type="text" id="sizeAP" />
+                    </div>
+                    <div>
+                        Ville du produit : <input type="text" id="cityAP" />
+                    </div>
+                    <div>
+                        Image du produit (URL) : <input type="text" id="picAP" />
+                    </div>
+                    <div>
+                        Catégorie du produit : <input type="text" id="catAP" />
                     </div>
                     <div>
                         <input type="button" onclick="sendFormAddProduct()" value="Envoyer" />
@@ -111,10 +126,19 @@
                         Nom du produit : <input type="text" id="nameEP" />
                     </div>
                     <div>
-                        Description du produit : <input type="text" id="descEP" />
+                        Prix du produit : <input type="number" id="priceEP" />
                     </div>
                     <div>
-                        Prix du produit : <input type="number" id="priceEP" />
+                        Taille du produit : <input type="text" id="sizeEP" />
+                    </div>
+                    <div>
+                        Ville du produit : <input type="text" id="cityEP" />
+                    </div>
+                    <div>
+                        Image du produit (URL) : <input type="text" id="picEP" />
+                    </div>
+                    <div>
+                        Catégorie du produit : <input type="text" id="catEP" />
                     </div>
                     <div>
                         <input type="button" onclick="sendFormEditProduct()" value="Envoyer" />
@@ -163,7 +187,7 @@
                     </div>
                 </div>
             </div>
-            <div class="articles">
+            <!--<div class="articles">
                 <div class="addArticles">
                     <div>
                         <h2>Ajouter un article :</h2>
@@ -206,13 +230,13 @@
                         <input type="button" onclick="sendFormEditArticle()" value="Envoyer" />
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div class="listComs">
                 <h2>Commentaires signalés :</h2>
                 <?php
 
                     function listFlaggedComs() {
-                        $bdd = new PDO('mysql:host=localhost;dbname=testprojet;charset=utf8', 'root', '');
+                        $bdd = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root', '');
 
                         $requete = $bdd->prepare("SELECT `id`, `commentaire` FROM `commentaires` WHERE `flag` = 1");
                         $requete->execute();
