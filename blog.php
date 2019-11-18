@@ -54,7 +54,7 @@
                                                 placeholder="Tu peux poster et discuter avec les autres participants sur des évènement auxquels t'as déjà participer ....."></textarea>
                                             <div class="custom-file">
                                                 <input type="file" name="image" class="custom-file-input" id="customFile">
-                                                <label class="custom-file-label" for="customFile">Charger l'image</label>
+                                                <label class="custom-file-label" for="customFile">Charger l'image (seul les .png et .jpg et .jpeg sont acceptés)</label>
                                             </div>
                                             <select name="evenement_participe">
                                                 <!-- on doit faire un include évenement passé -->

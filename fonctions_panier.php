@@ -107,11 +107,12 @@
     case 'commander':
 
         // Requête préparée pour empêcher les injections SQL
-    $requete = $bdd->prepare("INSERT INTO commande(Id_goodie_vetements, Id_evenement, Id_user, Quantite,Designation,Link)  
-      SELECT Id_prod, Id_evnt, Id_user, Quantite,Designation,Link
+    $requete = $bdd->prepare("INSERT INTO commande(Id_goodie_vetements, Id_evenement, Id_user, Quantite,Designation,Link,Ville)  
+      SELECT Id_prod, Id_evnt, Id_user, Quantite,Designation,Link,:ville
       FROM panier
       WHERE Id_user=:id_user;");
     $requete->bindValue(':id_user', $user, PDO::PARAM_STR);
+    $requete->bindValue(':ville', $_SESSION['Ville'], PDO::PARAM_STR);
     $requete->execute();
     
       

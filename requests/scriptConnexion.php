@@ -6,7 +6,7 @@ include 'connexionBdd.php';
 $e_mail = isset($_POST['email']) ? $_POST['email']: NULL;
 $mot_DePasse = isset($_POST['motDePasse']) ? $_POST['motDePasse']: NULL;
 // Requête préparée pour empêcher les injections SQL
-$requete = $bdd->prepare("SELECT * FROM etudiantinscrit WHERE Email=:email
+$requete = $bdd->prepare("SELECT * FROM users WHERE Email=:email
 AND Mdp=:motdepasse");
 // Liaison des variables de la requête préparée aux variables PHP
 $requete->bindValue(':email', $e_mail, PDO::PARAM_STR);

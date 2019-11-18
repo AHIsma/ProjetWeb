@@ -10,7 +10,7 @@
          $file_tmp_name = $_FILES['image']['tmp_name'];
          $file_dest = '../assets/images/'.$file_name;
          $fil_arbores = 'assets/images/'.$file_name;
-        $extension_autorisees = array('.png', '.jpg');
+        $extension_autorisees = array('.png', '.jpg', '.jpeg');
 
         if (in_array($file_extension, $extension_autorisees)) {
             if (move_uploaded_file($file_tmp_name, $file_dest)) {
@@ -53,7 +53,7 @@
             //     $Likes = $requete->fetch();
             //     $likes = $likes['likes'];
                 
-                    $designation = "Laser game";
+                    $designation = $_GET['ID'];
 
 
                 $requete = $bdd->prepare("INSERT INTO post(id_users, nom, prenom, Ville, nom_evenement, message, images) VALUES(:Id_user, :nom, :prenom, :ville, :nom_evenement, :message, :image);");
@@ -69,7 +69,7 @@
                 header('Location: ../blog.php');
             }
         }else {
-            echo "seul les .png et .jpg sont valides";
+            echo "seul les .png et .jpg et .jpeg sont valides";
         }
 
     }

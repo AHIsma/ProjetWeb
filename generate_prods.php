@@ -19,9 +19,13 @@
 	                        <div class="bbb_deals_slider_container">
 	                            <div class=" bbb_deals_item">
 	                                <div class="bbb_deals_image"><img class="image_article" src=' . $x['Link'] . '
-	                                        alt=""> 
+											alt="">'; 
+											if(isset($_SESSION['enligne']) && $_SESSION['enligne'] == "1") {;
+												echo '
 	                                        <a href="fonctions_panier.php?action=firstadd&amp;id_prod='.$x['Id'].'&amp;designation='.$x['Designation'].'&amp;prix='.$x['Prix'].'&amp;taille='.$x['Taille'].'&amp;ville='.$x['Ville'].'&amp;link='.$x['Link'].'&amp;quantite='.$x['Quantite'].'" class="panier" style="display: none;">
-	                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
+											<i class="fa fa-cart-plus fa-3x panier_icone"></i></a>';
+										} echo '
+											</div>
 	                                <div class="bbb_deals_content">
 	                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
 	                                        <div class="bbb_deals_item_category"><a href=""></a></div>

@@ -4,7 +4,7 @@
 	}
 	include 'requests/connexionBdd.php';
 
-	$requete = $bdd->prepare("SELECT * FROM  panier WHERE Id_user=:id_user");
+	$requete = $bdd->prepare("SELECT * FROM  panier WHERE Id_user=:id_user AND Quantite!=0");
 	$requete->bindvalue(':id_user', $_SESSION['id_user'], PDO::PARAM_STR);
 
 

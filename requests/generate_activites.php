@@ -15,8 +15,13 @@ $requete = $bdd->prepare("SELECT * FROM  evenement WHERE Ville = :ville AND Date
                         <div class="bbb_deals_slider_container">
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="' . $ligne['Images'] . '"
-                                        alt=""><a href="requests/scriptAjoutPanier_bdd.php?id_evenement=' . $ligne['ID'] . '" class="panier" style="display: none;">
-                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
+                                        alt="">';
+                                        if(isset($_SESSION['enligne']) && $_SESSION['enligne'] == "1") {;
+                                            echo '
+                                        <a href="requests/scriptAjoutPanier_bdd.php?id_evenement=' . $ligne['ID'] . '" class="panier" style="display: none;">
+                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a>
+                                        '; } echo '
+                                        </div>
                                 <div class="bbb_deals_content">
                                     <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
                                         

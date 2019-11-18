@@ -9,6 +9,9 @@
 
                 ?>
                     <li class="nav-item">
+                    <a class="nav-link" href="panierEvent.php"><i class="fa fa-list"></i></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="panier.php"><i class="fa fa-shopping-cart"></i></a>
                     </li>
                     <li class="nav-item">

@@ -6,8 +6,9 @@ include 'connexionBdd.php';
 $requeteee = $bdd->prepare("DELETE FROM `carousel`");
 $requeteee->execute();
 
-$requete = $bdd->prepare("INSERT INTO carousel(nom_produit, image_url) SELECT Designation, Link FROM commande LIMIT 3");
-        $requete->execute();  
+$requete = $bdd->prepare("INSERT INTO carousel(nom_produit, image_url) SELECT Designation, Link FROM commande WHERE Ville=:ville LIMIT 3");
+$requete->bindValue(':ville', $_SESSION['Ville'], PDO::PARAM_STR);
+        $requete->execute();   
 
 $requetee = $bdd->prepare("SELECT nom_produit, image_url FROM carousel");
 $requetee->execute();  

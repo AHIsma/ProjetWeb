@@ -2,9 +2,10 @@
 function sendFormAddEvent() {
     $.post("http://localhost:3000/events", {
         name: $("#nameAE").val(),
-        description: $("#descAE").val(),
         date: $("#dateAE").val(),
-        price: $("#priceAE").val()
+        price: $("#priceAE").val(),
+        city: $("#cityAE").val(),
+        picture: $("#picAE").val()
     }, function (data) {
         console.log(data);
     }, 'json');
@@ -31,10 +32,11 @@ function sendFormEditEvent() {
         type: 'PATCH',
         data: {
             name: $("#nameEE").val(),
-            description: $("#descEE").val(),
             date: $("#dateEE").val(),
             price: $("#priceEE").val(),
-            id: $("#idEE").val()
+            id: $("#idEE").val(),
+            city: $("#cityEE").val(),
+            picture: $("#picEE").val()
         },
         dataType: 'json'
     });
@@ -48,8 +50,11 @@ function sendFormAddProduct() {
         type: 'POST',
         data: {
             name: $("#nameAP").val(),
-            description: $("#descAP").val(),
-            price: $("#priceAP").val()
+            price: $("#priceAP").val(),
+            city: $("#cityAP").val(),
+            picture: $("#picAP").val(),
+            category: $("#catAP").val(),
+            size: $("#sizeAP").val()
         },
         dataType: "json"
     });
@@ -76,8 +81,11 @@ function sendFormEditProduct() {
         type: 'PATCH',
         data: {
             name: $("#nameEP").val(),
-            description: $("#descEP").val(),
             price: $("#priceEP").val(),
+            city: $("#cityEP").val(),
+            picture: $("#picEP").val(),
+            size: $("#sizeEP").val(),
+            category: $("#catEP").val(),
             id: $("#idEP").val()
         },
         dataType: "json"
@@ -120,7 +128,7 @@ function sendFormFlagEvent() {
     }
 }
 
-function sendFormAddArticle() {
+/*function sendFormAddArticle() {
     $.ajax({
         url: 'http://localhost:3000/articles',
         type: 'POST',
@@ -161,8 +169,8 @@ function sendFormEditArticle() {
 
     alert("L'article a été modifié");
 }
-
-function sendFormFlagEvent() {
+*/
+function sendFormFlagComment() {
     let typeFC;
     if ($("#typeFC").val() == "Signaler")
     {
@@ -170,7 +178,7 @@ function sendFormFlagEvent() {
     }
     else if ($("#typeFC").val() == "Enlever le signalement")
     {
-        typeFP = 0;
+        typeFC = 0;
     }
     else
     {

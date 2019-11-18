@@ -13,7 +13,7 @@ $tel = isset($_POST['tel']) ? $_POST['tel']: NULL;
 
 
 // Requête préparée pour empêcher les injections SQL
-$requete = $bdd->prepare("SELECT * FROM etudiantinscrit WHERE Email = :email;");
+$requete = $bdd->prepare("SELECT * FROM users WHERE Email = :email;");
 // Liaison des variables de la requête préparée aux variables PHP
 $requete->bindValue(':email', $e_mail, PDO::PARAM_STR);
 
@@ -23,7 +23,7 @@ if (!$requete->fetch())
 {
 
     // Requête préparée pour empêcher les injections SQL
-    $requete = $bdd->prepare("INSERT INTO etudiantinscrit(Email,Mdp,Nom,Prenom,Ville,Sexe,Telephone) VALUES(:email,:Pass,:nom,:prenom,:ville,:gender,:tel);");
+    $requete = $bdd->prepare("INSERT INTO users(Email,Mdp,Nom,Prenom,Ville,Sexe,Telephone) VALUES(:email,:Pass,:nom,:prenom,:ville,:gender,:tel);");
     
     $requete->bindValue(':email', $e_mail, PDO::PARAM_STR);
     $requete->bindValue(':Pass', $p_word, PDO::PARAM_STR);

@@ -24,7 +24,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'testProjet'
+    database: 'bdd_site_bde'
 });
 
 connection.connect(function (err) {
@@ -48,21 +48,22 @@ myRouter.route('/events') //Pour gérer les evènements
         connection.query(sql, function (error, results, fields) {
             if (error) throw error;
         });*/
-        connection.query("INSERT INTO evenements (name, description, date, price) VALUES ('" + req.body.name + "', '" + req.body.description + "', '" + req.body.date + "', '" + req.body.price + "')", function (error, results, fields) {
+        connection.query("INSERT INTO evenement (Designation, Date_prv, Prix, Ville, Images) VALUES ('" + req.body.name + "', '" + req.body.date + "', '" + req.body.price + "', '" + req.body.city + "', '" + req.body.picture + "')", function (error, results, fields) {
             if (error) throw error;
         });
 
         res.json({
             message: "Un évènement a été ajouté à la BD",
             nom: req.body.name,
-            description: req.body.description,
             date: req.body.date,
             prix: req.body.price,
+            ville: req.body.city,
+            picture: req.body.picture,
             method: req.method
         }); //affichage en json pour voir si la requête a fonctionné
     })
     .delete(function (req, res) { //pour supprimer un événement
-        connection.query("DELETE FROM evenements WHERE id = '" + req.body.id + "'", function (error, results, fields) {
+        connection.query("DELETE FROM evenement WHERE id = '" + req.body.id + "'", function (error, results, fields) {
             if (error) throw error;
         })
 
@@ -72,16 +73,17 @@ myRouter.route('/events') //Pour gérer les evènements
         });
     })
     .patch(function (req, res) { //pour modifier un événement
-        connection.query("UPDATE evenements SET name = '" + req.body.name + "', description = '" + req.body.description + "', date = '" + req.body.date + "', price = " + req.body.price + " WHERE evenements.id = " + req.body.id, function (error, results, fields) {
+        connection.query("UPDATE evenement SET Designation = '" + req.body.name + "', Date_prv = '" + req.body.date + "', Prix = " + req.body.price + ", Images = '" + req.body.picture + "', Ville = '" + req.body.city + "' WHERE evenement.id = " + req.body.id, function (error, results, fields) {
             if (error) throw error;
         })
 
         res.json({
             message: "L'évènement a été mis à jour",
             name: req.body.name,
-            description: req.body.description,
             date: req.body.date,
             price: req.body.price,
+            ville: req.body.city,
+            picture: req.body.picture,
             id: req.body.id
         })
     })
@@ -89,7 +91,7 @@ myRouter.route('/events') //Pour gérer les evènements
 myRouter.route('/flag') //gestion du signalement des événements
     .patch(function (req, res) {
         if (req.body.type == 1) { //on signale un événement
-            connection.query("UPDATE evenements SET flag = 1 WHERE evenements.id = '" + req.body.id + "'", function (error, results, fields) {
+            connection.query("UPDATE evenement SET flag = 1 WHERE evenement.id = '" + req.body.id + "'", function (error, results, fields) {
                 if (error) throw error;
             })
 
@@ -99,7 +101,7 @@ myRouter.route('/flag') //gestion du signalement des événements
             });
         }
         if (req.body.type == 0) { //on enlève le signalement d'un événement
-            connection.query("UPDATE evenements SET flag = 0 WHERE evenements.id = '" + req.body.id + "'", function (error, results, fields) {
+            connection.query("UPDATE evenement SET flag = 0 WHERE evenement.id = '" + req.body.id + "'", function (error, results, fields) {
                 if (error) throw error;
             })
 
@@ -113,20 +115,21 @@ myRouter.route('/flag') //gestion du signalement des événements
 myRouter.route("/products") //requêtes pour gérer les produits
     //on ajoute un produit
     .post(function (req, res) {
-        connection.query("INSERT INTO products (name, description, price) VALUES ('" + req.body.name + "', '" + req.body.description + "', '" + req.body.price + "')", function (error, results, fields) {
+        connection.query("INSERT INTO goodie_vetements (Designation, Prix, Ville, Link, Taille, Categorie) VALUES ('" + req.body.name + "', '" + req.body.price + "', '" + req.body.city + "', '" + req.body.picture + "', '" + req.body.size + "', '" + req.body.category + "')", function (error, results, fields) {
             if (error) throw error;
         });
         res.json({
             message: "Produit créé avec les infos suivantes :",
             name: req.body.name,
-            description: req.body.description,
             price: req.body.price,
+            ville: req.body.city,
+            picture: req.body.picture,
             methode: req.method
         });
     })
     //on supprime un produit
     .delete(function (req, res) {
-        connection.query("DELETE FROM products WHERE id = '" + req.body.id + "'", function (error, results, fields) {
+        connection.query("DELETE FROM goodie_vetements WHERE id = '" + req.body.id + "'", function (error, results, fields) {
             if (error) throw error;
         });
 
@@ -137,20 +140,21 @@ myRouter.route("/products") //requêtes pour gérer les produits
     })
     //on modifie un produit
     .patch(function (req, res) {
-        connection.query("UPDATE products SET name = '" + req.body.name + "', description = '" + req.body.description + "', price = " + req.body.price + " WHERE products.id = " + req.body.id, function (error, results, fields) {
+        connection.query("UPDATE goodie_vetements SET Designation = '" + req.body.name + "', Prix = " + req.body.price + ", Ville = '" + req.body.city + "', Link = '" + req.body.picture + "', Taille = '" + req.body.size + "', Categorie = '" + req.body.category +"' WHERE goodie_vetements.id = " + req.body.id, function (error, results, fields) {
             if (error) throw error;
         })
 
         res.json({
             message: "Le produit a été mis à jour",
             name: req.body.name,
-            description: req.body.description,
             price: req.body.price,
+            ville: req.body.city,
+            picture: req.body.picture,
             id: req.body.id
         })
     });
 
-myRouter.route("/articles")
+/*myRouter.route("/articles")
     //on ajoute un article
     .post(function (req, res) {
         connection.query("INSERT INTO articles (name, content) VALUES ('" + req.body.name + "', '" + req.body.content + "')", function (error, results, fields) {
@@ -186,7 +190,7 @@ myRouter.route("/articles")
             name: req.body.name,
             content: req.body.content
         })
-    })
+    })*/
 
 myRouter.route("/comments")
     //on signale un commentaire
