@@ -9,4 +9,5 @@ $requetee->execute();
 $lignee=$requetee->fetch();
 
 $_SESSION['enligne'] = $lignee['online'];
+$_SESSION['status_bde'] = $ligne['Status'];
 ?>

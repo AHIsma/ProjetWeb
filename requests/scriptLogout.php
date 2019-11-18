@@ -8,6 +8,6 @@ $requete->bindValue(':id_user', $_SESSION['id_user'], PDO::PARAM_STR);
 $requete->execute();
 
 session_destroy();
-header('Location: ../bdecesicampus.php');
+header('Location: ../index.php');
 exit();
 ?>

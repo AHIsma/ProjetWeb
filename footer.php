@@ -52,7 +52,7 @@
                 <p>
                     <a href="confidentialite.html">Politique de confidentialité</a>
                     <a href="mentions_legales.html">Mentions légales</a>
-                    <a href="credits.html">Crédits</a>
+                    <a href="credits.html">Conditions Générales</a>
                 </p>
             </div>
             <div class="paiements">

@@ -1,6 +1,4 @@
 var nomcampus = localStorage.getItem("campus");
-$changementcampus = $(".navbar-brand");
-$changementcampus.append("" + nomcampus + "");
 
 $(this).next().hide();
 $(document).ready(function () {
@@ -13,3 +11,19 @@ $(document).ready(function () {
         $(this).children(".panier").hide();
     });
 });
+
+function cacherComment() {
+    var x = document.getElementById("monCommentaire");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+// $(document).ready(function() {
+//     setInterval(function() {
+//         $('.affichercommentaires').load('afficherCommentaire.php')
+//     }, 100);
+
+// });     je dois mettre le post en auto refresh !    <div class="affichercommentaires"></div>

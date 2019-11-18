@@ -758,37 +758,14 @@ footer .liens a {
     width: 30%;
 }
 
-.body_blog .thumbnail {
-    padding: 0px;
+.body_blog .card-footer .card-link {
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
 }
-
-.body_blog .panel {
-    position: relative;
-}
-
-.body_blog .panel>.panel-heading:after,
-.panel>.panel-heading:before {
-    position: absolute;
-    top: 11px;
-    left: -29px;
-    right: 100%;
-    width: 0;
-    height: 0;
-    display: block;
-    content: " ";
-    border-color: transparent;
-    border-style: solid solid outset;
-    pointer-events: none;
-}
-
-.body_blog .panel>.panel-heading:after {
-    border-width: 7px;
-    border-right-color: #f7f7f7;
-}
-
-.body_blog .panel>.panel-heading:before {
-    border-right-color: #ddd;
-    border-width: 8px;
+.body_blog .card-footer .card-link:hover {
+    text-decoration: none;
+    color: #515C6F;
 }
 
 .body_blog .comment {
@@ -827,12 +804,12 @@ footer .liens a {
     margin:8px auto 0 auto;
     border-radius: 10px;
     background:transparent;
-    border: 2px solid #46A2D9;
-    color:#46A2D9;
+    border: 2px solid #F4AB25;
+    color:#F4AB25;
     transition: all .3s ease;
  }
     .cookie-alert a:hover {
-       background: #46A2D9;
+       background: #F4AB25;
        color:#2f2f2f;
     }
 

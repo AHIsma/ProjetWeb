@@ -36,100 +36,17 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3">
-                    <!-- bbb_deals -->
-                    <div class="bbb_deals">
-                        <div class="bbb_deals_slider_container">
-                            <div class=" bbb_deals_item">
-                                <div class="bbb_deals_image"><img class="image_article" src="assets/images/sweat.png"
-                                        alt="">
-                                    <a href="index.php" class="panier" style="display: none;">
-                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a>
-                                </div>
+                <?php
 
-                                <div class="bbb_deals_content">
-                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                    </div>
-                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <a href="index.php">
-                                            <div class="bbb_deals_item_name">Sweat CESI REIMS</div>
-                                        </a>
-                                        <div class="bbb_deals_item_price ml-auto">40€</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <!-- bbb_deals -->
-                    <div class="bbb_deals">
-                        <a href="index.php" class="panier"></a>
-                        <div class="bbb_deals_slider_container">
-                            <div class=" bbb_deals_item">
-                                <div class="bbb_deals_image"><img class="image_article" src="assets/images/pull.png"
-                                        alt=""><a href="index.php" class="panier" style="display: none;">
-                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
-                                <div class="bbb_deals_content">
-                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                    </div>
-                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <a href="index.php">
-                                            <div class="bbb_deals_item_name">Pull eSPORT REIMS</div>
-                                        </a>
-                                        <div class="bbb_deals_item_price ml-auto">30€</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <!-- bbb_deals -->
-                    <div class="bbb_deals">
-                        <a href="index.php" class="panier"></a>
-                        <div class="bbb_deals_slider_container">
-                            <div class=" bbb_deals_item">
-                                <div class="bbb_deals_image"><img class="image_article" src="assets/images/tasse.png"
-                                        alt=""><a href="index.php" class="panier" style="display: none;">
-                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
-                                <div class="bbb_deals_content">
-                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                    </div>
-                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <a href="index.php">
-                                            <div class="bbb_deals_item_name">Tasse eSPORT REIMS</div>
-                                        </a>
-                                        <div class="bbb_deals_item_price ml-auto">20€</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <!-- bbb_deals -->
-                    <div class="bbb_deals">
-                        <a href="index.php" class="panier"></a>
-                        <div class="bbb_deals_slider_container">
-                            <div class=" bbb_deals_item">
-                                <div class="bbb_deals_image"><img class="image_article" src="assets/images/usb.png"
-                                        alt=""><a href="index.php" class="panier" style="display: none;">
-                                        <i class="fa fa-cart-plus fa-3x panier_icone"></i></a></div>
-                                <div class="bbb_deals_content">
-                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                    </div>
-                                    <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
-                                        <a href="index.php">
-                                            <div class="bbb_deals_item_name">Clé USB BDE CESI REIMS</div>
-                                        </a>
-                                        <div class="bbb_deals_item_price ml-auto">10€</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+if (isset($_GET['id']) && $_GET['id'] ===  "passee") {
+ include 'requests/generate_activites_past.php';
+}   
+ 
+else {
+
+    include 'requests/generate_activites.php';
+}    
+?>
             </div>
         </div>
     </main>

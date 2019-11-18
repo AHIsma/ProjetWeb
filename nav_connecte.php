@@ -4,7 +4,7 @@
                 <?php
                     if(isset($_SESSION['status_bde']) && $_SESSION['status_bde'] == "2") 
                     {
-                        echo '<li class="nav-item"><a class="nav-link" href="panier.php"><i class="fa fa-edit"></i></a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="backOffice.php"><i class="fa fa-edit"></i></a></li>';
                     }
 
                 ?>
@@ -33,7 +33,7 @@
         </div>
         <div class="nav_all">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="boutique.php"></a>
+                <a class="navbar-brand" href="boutique.php"><?php include 'requests/generate_title.php'?></a>
                 <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse"
                     data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">

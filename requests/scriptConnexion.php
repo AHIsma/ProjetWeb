@@ -39,7 +39,6 @@ elseif ($ligne && $ligne['Status'] === '2') {
     
     $_SESSION['Ville'] = $ligne['Ville'];
 	$_SESSION['id_user'] = $ligne['Id'];
-	$_SESSION['status_bde'] = $ligne['Status'];
 	// echo "vous etes un membre du BDE";
 	include 'session_online.php';
 	header('Location: ../boutique.php');

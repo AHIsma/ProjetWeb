@@ -7,19 +7,19 @@
                         <a class="nav-link" href="boutique_categories?id=all">Tout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="boutique_categories?id=sweats">Sweats</a>
+                        <a class="nav-link" href="boutique_categories?id=Sweat">Sweats</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="boutique_categories?id=pulls">Pulls</a>
+                        <a class="nav-link" href="boutique_categories?id=Pull">Pulls</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="boutique_categories?id=polos">Polos</a>
+                        <a class="nav-link" href="boutique_categories?id=Polo">Polos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="boutique_categories?id=tasses">Tasses</a>
+                        <a class="nav-link" href="boutique_categories?id=Tasse">Tasses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="boutique_categories?id=usb">Clés USB</a> 
+                        <a class="nav-link" href="boutique_categories?id=USB">Clés USB</a> 
                     </li>
                 </ul>
         </nav>

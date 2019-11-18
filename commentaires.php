@@ -6,27 +6,18 @@
             <div class="col-sm-8 comment">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <strong>Nom Prénom</strong>
+                        <strong><?php
+                     echo $_SESSION['nom']= "OUBAYA"; ?> <?php echo $_SESSION['prenom']= "Amine"; ?></strong>
                     </div>
                     <div class="panel-body">
-                        <form class="newCommentForm">
-                            <input class="newcomment" type="text" name="commentaire" placeholder="Postez un commentaire" />
+                        <form  method="post" action="requests/generateComment.php" autocomplete="off">
+                            <input class="newcomment" name="commentaire" type="text" placeholder="Postez un commentaire" />
+                            <input type="hidden" name="id_post" value="<?php echo $_SESSION['id_post']; ?>" />
                             <input type="image" src="assets/images/send.png" alt="Add" />
                         </form>
                     </div>
                 </div>
             </div>
-
-            <div class="col-sm-8 comment">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <strong>Nom Prénom</strong>
-                    </div>
-                    <div class="panel-body">
-                        C'est nul !
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+</div>
+</div>
+</div>
