@@ -140,7 +140,7 @@ myRouter.route("/products") //requêtes pour gérer les produits
     })
     //on modifie un produit
     .patch(function (req, res) {
-        connection.query("UPDATE goodie_vetements SET Designation = '" + req.body.name + "', Prix = " + req.body.price + ", Ville = '" + req.body.city + "', Link = '" + req.body.picture + "', Taille = '" + req.body.size + "', Categorie = '" + req.body.category +"' WHERE goodie_vetements.id = " + req.body.id, function (error, results, fields) {
+        connection.query("UPDATE goodie_vetements SET Designation = '" + req.body.name + "', Prix = " + req.body.price + ", Ville = '" + req.body.city + "', Link = '" + req.body.picture + "', Taille = '" + req.body.size + "', Categorie = '" + req.body.category + "' WHERE goodie_vetements.id = " + req.body.id, function (error, results, fields) {
             if (error) throw error;
         })
 
@@ -152,6 +152,30 @@ myRouter.route("/products") //requêtes pour gérer les produits
             picture: req.body.picture,
             id: req.body.id
         })
+    });
+
+myRouter.route("/posts")
+    .patch(function (req, res) {
+        if (req.body.type == 1) { //on signale un post
+            connection.query("UPDATE post SET flag = 1 WHERE post.id = '" + req.body.id + "'", function (error, results, fields) {
+                if (error) throw error;
+            })
+
+            res.json({
+                message: "Le post a été signalé",
+                id: req.body.id
+            });
+        }
+        if (req.body.type == 0) { //on enlève le signalement d'un post
+            connection.query("UPDATE post SET flag = 0 WHERE post.id = '" + req.body.id + "'", function (error, results, fields) {
+                if (error) throw error;
+            })
+
+            res.json({
+                message: "Le signalement a été supprimé",
+                id: req.body.id
+            });
+        }
     });
 
 /*myRouter.route("/articles")

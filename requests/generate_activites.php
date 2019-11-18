@@ -1,3 +1,5 @@
+<script src="api/scriptSignalEvents.js"></script>
+
 <?php
 if(!isset($_SESSION)){
     session_start();}
@@ -12,7 +14,10 @@ $requete = $bdd->prepare("SELECT * FROM  evenement WHERE Ville = :ville AND Date
                     <!-- bbb_deals -->
                     <div class="bbb_deals">
                         <a href="index.php" class="panier"></a>
-                        <div class="bbb_deals_slider_container">
+                        <div class="bbb_deals_slider_container">';
+                        if(isset($_SESSION['status_bde']) && $_SESSION['status_bde'] == "3") {; echo '
+                        <a href="http://localhost/BDE/ProjetWeb/activites.php?id=avenir" onclick="flagEvent('; echo $ligne['ID']; echo ')"><i class="fa fa-exclamation-triangle fa-1x panier_icone"></i></a>'; };
+                        echo '
                             <div class=" bbb_deals_item">
                                 <div class="bbb_deals_image"><img class="image_article" src="' . $ligne['Images'] . '"
                                         alt="">';

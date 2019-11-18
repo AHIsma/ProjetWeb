@@ -3,10 +3,19 @@ if(!isset($_SESSION)){
     session_start();}
 include 'connexionBdd.php';
 
+
+
 $requeteee = $bdd->prepare("DELETE FROM `carousel`");
 $requeteee->execute();
 
-$requete = $bdd->prepare("INSERT INTO carousel(nom_produit, image_url) SELECT Designation, Link FROM commande WHERE Ville=:ville LIMIT 3");
+$requeteees = $bdd->prepare("TRUNCATE `bdd_site_bde`.`quantites`");
+$requeteees->execute();
+
+$requetes = $bdd->prepare("INSERT INTO quantites(Id_goodie_vetements, Quantite, Designation, Link, Ville) SELECT Id_goodie_vetements, SUM(Quantite) AS Quantite, Designation, Link, Ville FROM commande GROUP BY Id_goodie_vetements ORDER BY `Quantite` DESC");
+$requetes->execute(); 
+
+
+$requete = $bdd->prepare("INSERT INTO carousel(nom_produit, image_url) SELECT Designation, Link FROM quantites WHERE Ville=:ville LIMIT 3");
 $requete->bindValue(':ville', $_SESSION['Ville'], PDO::PARAM_STR);
         $requete->execute();   
 

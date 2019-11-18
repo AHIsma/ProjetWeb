@@ -1,3 +1,5 @@
+<script src="api/scriptSignalPosts.js"></script>
+
 <?php
 if(!isset($_SESSION)){
     session_start();}
@@ -29,7 +31,7 @@ $requete = $bdd->prepare("SELECT * FROM  post WHERE Ville = :ville ORDER BY `pos
                                                 <i class="fa fa-ellipsis-h"></i>
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                                <a class="dropdown-item" href="#">Signaler</a>
+                                                <a class="dropdown-item" href="blog.php" onclick="flagPost('; echo $ligne['id']; echo ')" >Signaler</a>
                                             </div>
                                         </div>
                                     </div>';

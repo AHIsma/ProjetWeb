@@ -1,3 +1,10 @@
+<?php
+if(!isset($_SESSION)){
+    session_start();}
+
+    if(isset($_SESSION['status_bde']) && $_SESSION['status_bde'] == "2") 
+                    { ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -188,50 +195,6 @@
                     </div>
                 </div>
             </div>
-            <!--<div class="articles">
-                <div class="addArticles">
-                    <div>
-                        <h2>Ajouter un article :</h2>
-                    </div>
-                    <div>
-                        Nom de l'article : <input type="text" id="nameAA" />
-                    </div>
-                    <div>
-                        Contenu de l'article : <input type="text" id="contentAA" />
-                    </div>
-                    <div>
-                        <input type="button" onclick="sendFormAddArticle()" value="Envoyer" />
-                    </div>
-                </div>
-                <div class="deleteArticle">
-                    <div>
-                        <h2>Supprimer un article :</h2>
-                    </div>
-                    <div>
-                        ID de l'article : <input type="number" id="idDA" />
-                    </div>
-                    <div>
-                        <input type="button" onclick="sendFormDeleteArticle()" value="Envoyer" />
-                    </div>
-                </div>
-                <div class="editArticle">
-                    <div>
-                        <h2>Modifier un article :</h2>
-                    </div>
-                    <div>
-                        ID de l'article : <input type="number" id="idEA" />
-                    </div>
-                    <div>
-                        Nom de l'article : <input type="text" id="nameEA" />
-                    </div>
-                    <div>
-                        Contenu de l'article : <input type="text" id="contentEA" />
-                    </div>
-                    <div>
-                        <input type="button" onclick="sendFormEditArticle()" value="Envoyer" />
-                    </div>
-                </div>
-            </div>-->
             <div class="listComs">
                 <h2>Commentaires signalés :</h2>
                 <?php
@@ -261,3 +224,10 @@
 </body>
 
 </html>
+
+                <?php }
+                else {
+                    echo "Hahahahahaha vous n\'etes pas admin :v ";
+                }
+                
+                ?>

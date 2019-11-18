@@ -2,7 +2,6 @@
 <script src="api/scriptSignalComments.js"></script>
 
 <?php
-
 if(!isset($_SESSION)){
     session_start();
 }
@@ -11,7 +10,6 @@ include 'requests/connexionBdd.php';
 $req = $bdd->prepare('SELECT id, nom, prenom, commentaire FROM commentaires WHERE id_post = :id_post ');
 $req->bindValue(':id_post', $_SESSION['id_post'], PDO::PARAM_STR);
 $req->execute();
-
 while ($donnees = $req->fetch())
 {
 ?>
@@ -24,11 +22,11 @@ while ($donnees = $req->fetch())
                     <?php echo nl2br(htmlspecialchars($donnees['commentaire'])); ?>
                     <?php
                                         if(isset($_SESSION['status_bde']) && $_SESSION['status_bde'] == "3") {
-                                   foreach ($req->fetchAll() as $x){?><input type="button" onclick="flagComment($x['id']) /><?php echo $x['id'] ?>">
+                                   ?> <a href="blog.php" onclick="flagComment(<?php echo $donnees['id'] ?>)">
                                     <i class="fa fa-times-circle"></i>
                             </a>
                             <?php
-                                   }}
+                                        }
                                     ?>
                     </div>
                 </div>
@@ -37,4 +35,4 @@ while ($donnees = $req->fetch())
 <?php
 } // Fin de la boucle des commentaires
 $req->closeCursor();
-?>
+?> 
