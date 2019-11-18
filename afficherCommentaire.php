@@ -7,7 +7,7 @@ if(!isset($_SESSION)){
 }
 include 'requests/connexionBdd.php';
 // Récupération des commentaires
-$req = $bdd->prepare('SELECT nom, prenom, commentaire FROM commentaires WHERE id_post = :id_post ');
+$req = $bdd->prepare('SELECT id, nom, prenom, commentaire FROM commentaires WHERE id_post = :id_post ');
 $req->bindValue(':id_post', $_SESSION['id_post'], PDO::PARAM_STR);
 $req->execute();
 
@@ -23,11 +23,11 @@ while ($donnees = $req->fetch())
                     <?php echo nl2br(htmlspecialchars($donnees['commentaire'])); ?>
                     <?php
                                         if(isset($_SESSION['status_bde']) && $_SESSION['status_bde'] == "3") {
-                                   ?> <a href="boutique.php">
+                                   foreach ($req->fetchAll() as $x){?> <a href="scriptBackOffice.js?id_commnt=<?php echo $x['id']">
                                     <i class="fa fa-times-circle"></i>
                             </a>
                             <?php
-                                        }
+                                   }}
                                     ?>
                     </div>
                 </div>
