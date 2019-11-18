@@ -1,9 +1,9 @@
-function flagComment() {
+function flagComment(id_com) {
     $.ajax({
-        url: 'http://localhost:3000/flag',
+        url: 'http://localhost:3000/comments',
         type: 'PATCH',
         data: {
-            id: $("#id_comnt"),
+            id: id_com,
             type: 1
         },
         dataType: "json"
