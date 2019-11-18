@@ -24,7 +24,7 @@ while ($donnees = $req->fetch())
                     <?php echo nl2br(htmlspecialchars($donnees['commentaire'])); ?>
                     <?php
                                         if(isset($_SESSION['status_bde']) && $_SESSION['status_bde'] == "3") {
-                                   foreach ($req->fetchAll() as $x){?><?php echo $x['id'] ?>">
+                                   foreach ($req->fetchAll() as $x){?><input type="button" onclick="flagComment($x['id']) /><?php echo $x['id'] ?>">
                                     <i class="fa fa-times-circle"></i>
                             </a>
                             <?php
