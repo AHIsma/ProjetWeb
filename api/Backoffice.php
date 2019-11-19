@@ -236,9 +236,9 @@
                 <?php
 
                     function listFlaggedComs() {
-                        $bdd = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root', '');
+                        $bddComs = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root', '');
 
-                        $requete = $bdd->prepare("SELECT `id`, `commentaire` FROM `commentaires` WHERE `flag` = 1");
+                        $requete = $bddComs->prepare("SELECT `id`, `commentaire` FROM `commentaires` WHERE `flag` = 1");
                         $requete->execute();
 
                         $result = $requete->fetchAll(PDO::FETCH_ASSOC);
@@ -253,6 +253,30 @@
                     }
 
                     listFlaggedComs();
+                ?>
+            </div>
+            <div class="listEvents">
+                <h2>Événements signalés :</h2>
+                <?php
+
+                    function listFlaggedEvents() {
+                        $bddEvents = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root', '');
+
+                        $requete = $bddEvents->prepare("SELECT `ID`, `Designation` FROM `evenement` WHERE `flag` = 1");
+                        $requete->execute();
+
+                        $result = $requete->fetchAll(PDO::FETCH_ASSOC);
+                        //print_r($result);
+                        foreach ($result as &$value) {
+                            echo $value[ID];
+                            echo "<br />";
+                            echo $value[Designation];
+                            echo "<br />";
+                            echo "<br />";
+                        }
+                    }
+
+                    listFlaggedEvents();
                 ?>
             </div>
         </div>

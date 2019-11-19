@@ -40,6 +40,12 @@
     justify-content: center;
 }
 
+.listEvents
+{
+    display: flex;
+    justify-content: center;
+}
+
 /*body
 {
     color: white;
