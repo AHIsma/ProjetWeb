@@ -19,7 +19,7 @@ if(!isset($_SESSION)){
     <script src="api/scriptBackOffice.js"></script>
 </head>
 
-<body class="body_backoffice">
+<body>
     <div class="wrapper">
         <h1>Gestion et administration :</h1>
         <div class="container">
@@ -195,16 +195,57 @@ if(!isset($_SESSION)){
                     </div>
                 </div>
             </div>
+            <!--<div class="articles">
+                <div class="addArticles">
+                    <div>
+                        <h2>Ajouter un article :</h2>
+                    </div>
+                    <div>
+                        Nom de l'article : <input type="text" id="nameAA" />
+                    </div>
+                    <div>
+                        Contenu de l'article : <input type="text" id="contentAA" />
+                    </div>
+                    <div>
+                        <input type="button" onclick="sendFormAddArticle()" value="Envoyer" />
+                    </div>
+                </div>
+                <div class="deleteArticle">
+                    <div>
+                        <h2>Supprimer un article :</h2>
+                    </div>
+                    <div>
+                        ID de l'article : <input type="number" id="idDA" />
+                    </div>
+                    <div>
+                        <input type="button" onclick="sendFormDeleteArticle()" value="Envoyer" />
+                    </div>
+                </div>
+                <div class="editArticle">
+                    <div>
+                        <h2>Modifier un article :</h2>
+                    </div>
+                    <div>
+                        ID de l'article : <input type="number" id="idEA" />
+                    </div>
+                    <div>
+                        Nom de l'article : <input type="text" id="nameEA" />
+                    </div>
+                    <div>
+                        Contenu de l'article : <input type="text" id="contentEA" />
+                    </div>
+                    <div>
+                        <input type="button" onclick="sendFormEditArticle()" value="Envoyer" />
+                    </div>
+                </div>
+            </div>-->
             <div class="listComs">
                 <h2>Commentaires signalés :</h2>
                 <?php
-
                     function listFlaggedComs() {
-                        $bdd = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root', '');
-
-                        $requete = $bdd->prepare("SELECT `id`, `commentaire` FROM `commentaires` WHERE `flag` = 1");
+                        $bddComs = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root', '');
+                        $requete = $bddComs->prepare("SELECT `id`, `commentaire` FROM `commentaires` WHERE `flag` = 1");
                         $requete->execute();
-
                         $result = $requete->fetchAll(PDO::FETCH_ASSOC);
                         //print_r($result);
                         foreach ($result as &$value) {
@@ -215,8 +256,27 @@ if(!isset($_SESSION)){
                             echo "<br />";
                         }
                     }
-
                     listFlaggedComs();
+                ?>
+            </div>
+            <div class="listEvents">
+                <h2>Événements signalés :</h2>
+                <?php
+                    function listFlaggedEvents() {
+                        $bddEvents = new PDO('mysql:host=localhost;dbname=bdd_site_bde;charset=utf8', 'root', '');
+                        $requete = $bddEvents->prepare("SELECT `ID`, `Designation` FROM `evenement` WHERE `flag` = 1");
+                        $requete->execute();
+                        $result = $requete->fetchAll(PDO::FETCH_ASSOC);
+                        //print_r($result);
+                        foreach ($result as &$value) {
+                            echo $value[ID];
+                            echo "<br />";
+                            echo $value[Designation];
+                            echo "<br />";
+                            echo "<br />";
+                        }
+                    }
+                    listFlaggedEvents();
                 ?>
             </div>
         </div>

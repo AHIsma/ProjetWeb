@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <strong><?php
-                     echo $_SESSION['nom']= "OUBAYA"; ?> <?php echo $_SESSION['prenom']= "Amine"; ?></strong>
+                     echo $_SESSION['nom']; ?> <?php echo $_SESSION['prenom']; ?></strong>
                     </div>
                     <div class="panel-body">
                         <form  method="post" action="requests/generateComment.php" autocomplete="off">

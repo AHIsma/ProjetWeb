@@ -1,11 +1,20 @@
 <?php
-    
-    $to = "amineoubaya1921@gmail.com";
-    $subject = "My subject";
-    $txt = "Hello world!";
-    $headers = "From: donotreply@fmt.com" . "\r\n" .
-    "CC: somebodyelse@example.com";
-    
-    mail($to,$subject,$txt,$headers);
-
+ 
+    ini_set( 'display_errors', 1 );
+ 
+    error_reporting( E_ALL );
+ 
+    $from = "test@notreedomaine.com";
+ 
+    $to = "am14mca@gmail.com";
+ 
+    $subject = "Envoie de mail en PHP";
+ 
+    $message = "PHP mail marche";
+ 
+    $headers = "From:" . $from;
+ 
+    mail($to,$subject,$message, $headers);
+ 
+    echo "L'email a été envoyé.";
 ?>

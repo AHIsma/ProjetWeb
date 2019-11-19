@@ -24,6 +24,8 @@ if($ligne && $ligne['Status'] === '1'){
     }  
     $_SESSION['Ville'] = $ligne['Ville'];
 	$_SESSION['id_user'] = $ligne['Id'];
+	$_SESSION['nom'] = $ligne['Nom'];
+	$_SESSION['prenom'] = $ligne['Prenom'];
 	 // echo "vous etes un etudiant";
 
 	include 'session_online.php';
@@ -39,6 +41,8 @@ elseif ($ligne && $ligne['Status'] === '2') {
     
     $_SESSION['Ville'] = $ligne['Ville'];
 	$_SESSION['id_user'] = $ligne['Id'];
+	$_SESSION['nom'] = $ligne['Nom'];
+	$_SESSION['prenom'] = $ligne['Prenom'];
 	// echo "vous etes un membre du BDE";
 	include 'session_online.php';
 	header('Location: ../boutique.php');
@@ -51,6 +55,8 @@ elseif ($ligne && $ligne['Status'] === '3') {
 	    } 
  			$_SESSION['Ville'] = $ligne['Ville'];
 			$_SESSION['id_user'] = $ligne['Id'];
+			$_SESSION['nom'] = $ligne['Nom'];
+			$_SESSION['prenom'] = $ligne['Prenom'];
     		
 		// echo "vous etes un personnel";
 		include 'session_online.php';

@@ -21,7 +21,7 @@
                 $evenement = isset($_POST['evenement_participe']) ? $_POST['evenement_participe']: NULL;
 
                 // Requête préparée pour empêcher les injections SQL
-                $requete = $bdd->prepare("SELECT Nom FROM etudiantinscrit WHERE Id=:Id_user
+                $requete = $bdd->prepare("SELECT Nom FROM users WHERE Id=:Id_user
                 ");
                $requete->bindvalue(':Id_user', $_SESSION['id_user'], PDO::PARAM_STR);
                 // Exécution de la requête
@@ -29,7 +29,7 @@
                 $Nom = $requete->fetch();
                 $nom =$Nom['Nom'];
 
-                $requete = $bdd->prepare("SELECT Prenom FROM etudiantinscrit WHERE Id=:Id_user
+                $requete = $bdd->prepare("SELECT Prenom FROM users WHERE Id=:Id_user
                 ");
                $requete->bindvalue(':Id_user', $_SESSION['id_user'], PDO::PARAM_STR);
                 // Exécution de la requête
@@ -37,7 +37,7 @@
                 $Prenom = $requete->fetch();
                 $prenom = $Prenom['Prenom'];
 
-                $requete = $bdd->prepare("SELECT Ville FROM etudiantinscrit WHERE Id=:Id_user
+                $requete = $bdd->prepare("SELECT Ville FROM users WHERE Id=:Id_user
                 ");
                $requete->bindvalue(':Id_user', $_SESSION['id_user'], PDO::PARAM_STR);
                 // Exécution de la requête

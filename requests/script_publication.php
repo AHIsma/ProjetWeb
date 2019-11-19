@@ -48,13 +48,35 @@ $requete = $bdd->prepare("SELECT * FROM  post WHERE Ville = :ville ORDER BY `pos
                                 </p>
                                 <img class="image_poste" src="' . $ligne['images'] . '">
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer">'; 
+                            $id_post = $ligne['id'];
+                            $id_user = $_SESSION['id_user'];
+                            $requete = $bdd->prepare("SELECT * FROM likes WHERE id_post=:id_post AND id_user=:id_user");
+                            $requete->bindValue(':id_post', $id_post, PDO::PARAM_STR);
+                            $requete->bindValue(':id_user', $id_user, PDO::PARAM_STR);
+                            // Exécution de la requête
+                            $requete->execute();
+                            if ($donnee = $requete->fetch()) {
+                                echo'
                             <a href="requests/scriptLikes.php?id_p='.$ligne['id'].'&amp;id_u='.$ligne['id_users'].'" class="card-link"><i class="fa fa-gittip"></i> '.$ligne['nb_likes'].'</a>
                                 <a onclick="cacherComment()" class="card-link"><i class="fa fa-comment"></i> Comment</a>
                             </div> <div id="monCommentaire"> ';
                                 include "commentaires.php";
                                 include "afficherCommentaire.php";
-            echo'</div></div>';
+                            echo'</div></div>';
+                            }
+                            else {
+                                echo'
+                            <a href="requests/scriptLikes.php?id_p='.$ligne['id'].'&amp;id_u='.$_SESSION['id_user'].'" class="card-link"><i class="fa fa-gittip"></i> '.$ligne['nb_likes'].'</a>
+                                <a onclick="cacherComment()" class="card-link"><i class="fa fa-comment"></i> Comment</a>
+                            </div> <div id="monCommentaire"> ';
+                                include "commentaires.php";
+                                include "afficherCommentaire.php";
+                            echo'</div></div>';
+                            } 
+                                
+                            
+                            
             
            }   
 ?>
